@@ -1,9 +1,9 @@
-import { ILangObject, IPossibleLanguage } from "@/types/language";
+import { IDOM, IPossibleLanguage } from "@/types/language";
 import { en } from "./en";
 import { ua } from "./ua";
 import { ru } from "./ru";
 
-const languages = (langId: IPossibleLanguage): ILangObject => {
+const languages = (langId: IPossibleLanguage): IDOM => {
 
     if (langId === "ua") return ua;
     if (langId === "ru") return ru;

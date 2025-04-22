@@ -1,6 +1,6 @@
-import { ILangObject } from "../../types/language";
+import { IDOM } from "../types/language";
 
-export const ru: ILangObject = {
+export const ru: IDOM = {
     head: {
         canonical: "https://sinzem.github.io",
         title: "Резюме разработчика",

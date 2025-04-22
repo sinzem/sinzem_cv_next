@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import languages from "./../languages/languages";
+import languages from "../../languages/languages";
 import styles from "../styles/page.module.css";
 
 import metadataGenerate from "../../libs/metadataGenerate";

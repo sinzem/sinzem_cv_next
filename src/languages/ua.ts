@@ -1,13 +1,13 @@
-import { ILangObject } from "../../types/language";
+import { IDOM } from "../types/language";
 
-export const en: ILangObject = {
+export const ua: IDOM = {
     head: {
         canonical: "https://sinzem.github.io",
-        title: "Curriculum vitae",
-        description: "Resume for front-end developer position",
+        title: "Резюме розробника",
+        description: "Резюме на позицію Front-end розробника",
         keywords: "Resume, Curriculum vitae, Front-end developer, Kharkiv, JavaScript, React",
         openGraph: {
-            type: "website",
+            type: 'website',
             url: 'http://sinzem.github.io',
             title: 'Curriculum vitae',
             description: 'Resume for front-end developer position. JavaScript + React',
@@ -25,9 +25,9 @@ export const en: ILangObject = {
         }
     },
     main: {
-        title: "My name is Sergiy Inozemtsev",
-        subtitle: "I am a Front-end developer from Kharkiv",
-        leftBtn: "Portfolio",
-        rightBtn: "Contacts",
+        title: "Мене звуть Сергій Іноземцев",
+        subtitle: "Я Front-end розробник із міста Харків",
+        leftBtn: "Портфоліо",
+        rightBtn: "Контакти",
     }
 }
