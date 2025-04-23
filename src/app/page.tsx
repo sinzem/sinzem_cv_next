@@ -10,11 +10,11 @@ export const metadata: Metadata = metadataGenerate("en");
 
 export default async function Home() {
 
-  const {main} = languages("en");
+  const {header} = languages("en");
 
   return (
     <div className={styles.page}>
-      <h1>{main.title}</h1>
+      <h1>{header.title}</h1>
       <Link href="/ua">
         <button>Ua</button>
       </Link>
