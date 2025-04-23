@@ -1,6 +1,6 @@
-import { IDOM } from "../types/language";
+import { ILanguageDOM } from "../types/language";
 
-export const en: IDOM = {
+export const en: ILanguageDOM = {
     head: {
         canonical: "https://sinzem.github.io",
         title: "Curriculum vitae",
@@ -24,10 +24,80 @@ export const en: IDOM = {
             'google': 'notranslate',
         }
     },
-    main: {
+    header: {
         title: "My name is Sergiy Inozemtsev",
         subtitle: "I am a Front-end developer from Kharkiv",
         leftBtn: "Portfolio",
         rightBtn: "Contacts",
-    }
+    },
+    aside: {
+        title: "Social media",
+    },
+    about: {
+        title: "About me",
+        hard: {
+            title: "Hard skills",
+            descriptionTop: "I acquired the skills for this block while studying online courses from the Udemy school and materials from the Internet",
+            skillTop1: "HTML",
+            skillTop2: "CSS, SCSS",
+            skillTop3: "JavaScript, TypeScript",
+            skillTop4: "React, Next.js",
+            descriptionBottom: "The following skills were obtained from different Youtube channels",
+            skillBottom1: "Node.js",
+            skillBottom2: "Nest.js, express",
+            skillBottom3: "PostgreSQL, MongoDB",
+            skillBottom4: "Gulp, Webpack",
+            skillBottom5: "Git",
+            skillBottom6: "SEO",
+        },
+        soft: {
+            title: "Soft skills",
+            descriptionTop: "Personal qualities",
+            skillTop1: "Responsible attitude to work",
+            skillTop2: "Interest in development",
+            skillTop3: "Learning ability",
+            skillTop4: "Good written and verbal communication skills",
+            skillTop5: "Desire to work and earn money",
+            descriptionBottom: "English level",
+            skillBottom1: "A2/B1",
+            skillBottom2: "(continuing education)",
+        },
+        general: {
+            title: "General informations",
+            skillTop1: "Full age: 41",
+            skillTop2: "Phone number: +38 (093) 410-45-12",
+            skillTop3: "Place of residence: Kharkiv",
+            skillTop4: "Experiance in development: 2 years",
+            skillTop5: "Participation in commercial projects: 6 months",
+            skillBottom1: "Education: KhNPU named after G.S.Skovoroda, psychology, master's degree (did not work in the speciality)",
+            skillBottom2: "At the moment I devote all my free time to studying English and IT",
+            skillBottom3: "Ready to start working immediately (remote only)",
+        },
+    },
+    portfolio: {
+        title: "Portfolio",
+        subtitle: "My works*",
+        note1: "*Not all projects are adapted for the mobile version",
+        note2: "*Project repositories can be viewed on",
+        note2Link: "GitHub",
+    },
+    footer: {
+        title: "My contacts",
+        subtitle: "Contact me",
+        linksTitle: "In any way convenient for you:",
+        telLabel: "Tel:",
+        telNumber: "+38 (093) 410-45-12",
+        telForLink: "tel:+380934104512",
+        form: {
+            mainLabel: "Or leave your contacts and I will write to you myself:",
+            nameLabel: "Your name:",
+            emailLabel: "Your E-mail:",
+            messageLabel: "Your message:",
+            privacyLabel: "I agree with",
+            privacyLink: "the privacy policy",
+            buttonText: "Send message",
+            sendSuccess: "Thanks! The message was sent successfully",
+            sendError: "Sorry, an error has occurred...",
+        }
+    },
 }

@@ -1,19 +1,19 @@
-import { IDOM } from "../types/language";
+import { ILanguageDOM } from "../types/language";
 
-export const ua: IDOM = {
+export const ua: ILanguageDOM = {
     head: {
         canonical: "https://sinzem.github.io",
         title: "Резюме розробника",
         description: "Резюме на позицію Front-end розробника",
-        keywords: "Resume, Curriculum vitae, Front-end developer, Kharkiv, JavaScript, React",
+        keywords: "Resume, Curriculum vitae, Front-end developer, Kharkiv, JavaScript, React, резюме, front-end розробник, Харків",
         openGraph: {
             type: 'website',
             url: 'http://sinzem.github.io',
             title: 'Curriculum vitae',
-            description: 'Resume for front-end developer position. JavaScript + React',
+            description: 'Резюме на посаду front-end розробника. JavaScript + React',
             images: [
                 {
-                    url: "../assets/img/main_block/for-seo.png",
+                    url: "../../assets/img/main_block/for-seo.png",
                     width: 150,
                     height: 120,
                     alt: 'My photo',
@@ -24,10 +24,80 @@ export const ua: IDOM = {
             'google': 'notranslate',
         }
     },
-    main: {
+    header: {
         title: "Мене звуть Сергій Іноземцев",
         subtitle: "Я Front-end розробник із міста Харків",
         leftBtn: "Портфоліо",
         rightBtn: "Контакти",
-    }
+    },
+    aside: {
+        title: "Соціальні мережі",
+    },
+    about: {
+        title: "Про мене",
+        hard: {
+            title: "Hard skills",
+            descriptionTop: "Навички з цього блоку я набув під час вивчення онлайн-курсів школи Udemy та матеріалів з Інтернету",
+            skillTop1: "HTML",
+            skillTop2: "CSS, SCSS",
+            skillTop3: "JavaScript, TypeScript",
+            skillTop4: "React, Next.js",
+            descriptionBottom: "Наступні навички були отримані з різних YouTube-каналів",
+            skillBottom1: "Node.js",
+            skillBottom2: "Nest.js, express",
+            skillBottom3: "PostgreSQL, MongoDB",
+            skillBottom4: "Gulp, Webpack",
+            skillBottom5: "Git",
+            skillBottom6: "SEO",
+        },
+        soft: {
+            title: "Soft skills",
+            descriptionTop: "Особистісні якості",
+            skillTop1: "Відповідальне ставлення до роботи",
+            skillTop2: "Інтерес до розробки",
+            skillTop3: "Здатність до навчання",
+            skillTop4: "Хороші письмові та усні комунікативні навички",
+            skillTop5: "Бажання працювати та заробляти гроші",
+            descriptionBottom: "Рівень англійської",
+            skillBottom1: "A2/B1",
+            skillBottom2: "(продовжую навчання)",
+        },
+        general: {
+            title: "Загальна інформація",
+            skillTop1: "Повний вік: 4",
+            skillTop2: "Номер телефону: +38 (093) 410-45-12",
+            skillTop3: "Місце проживання: Харків",
+            skillTop4: "Досвід у розробці: 2 роки",
+            skillTop5: "Участь у комерційних проектах: 6 мiсяцiв",
+            skillBottom1: "Освіта: ХНПУ ім. Г.С.Сковороди, психологія, магістр (за фахом не працював)",
+            skillBottom2: "На даний момент весь вільний час присвячую вивченню англійської мови та ІТ",
+            skillBottom3: "Готовий відразу приступити до роботи (тільки віддалено)",
+        },
+    },
+    portfolio: {
+        title: "Портфоліо",
+        subtitle: "Мої роботи*",
+        note1: "*Не всі проекти адаптовані пiд мобільну версію",
+        note2: "*Репозиторії проектів можна переглянути на",
+        note2Link: "GitHub",
+    },
+    footer: {
+        title: "Мої контакти",
+        subtitle: "Зв'яжіться зі мною",
+        linksTitle: "Будь-яким зручним для вас способом:",
+        telLabel: "Тел:",
+        telNumber: "+38 (093) 410-45-12",
+        telForLink: "tel:+380934104512",
+        form: {
+            mainLabel: "Або залиште свої дані, і я сам напишу вам:",
+            nameLabel: "Ваше ім'я:",
+            emailLabel: "Ваш E-mail:",
+            messageLabel: "Ваше повідомлення:",
+            privacyLabel: "Я згоден(а) з",
+            privacyLink: "політикою конфіденційності",
+            buttonText: "Надіслати повідомлення",
+            sendSuccess: "Дякую! Повідомлення успішно відправлено",
+            sendError: "Дуже шкода, щось пішло не так...",
+        }
+    },
 }

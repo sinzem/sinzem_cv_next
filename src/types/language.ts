@@ -2,11 +2,13 @@
 
 export type IPossibleLanguage = "en" | "ua" | "ru";
 
-export interface IDOM {
+export interface ILanguageDOM {
     head: IHeadDOM;
-    main: IMainDOM;
+    header: IHeaderDOM;
     aside: IAsideDOM;
     about: IAboutDOM;
+    portfolio: IPortfolioDOM;
+    footer: IFooterDOM;
 }
 
 export interface IHeadDOM {
@@ -33,7 +35,7 @@ export interface IOGImagesDOM {
     height: number;
     alt: string;
 }
-export interface IMainDOM {
+export interface IHeaderDOM {
     title: string;
     subtitle: string;
     leftBtn: string;
@@ -92,3 +94,32 @@ export interface IGeneralDOM {
     skillBottom3: string;
 }
 
+export interface IPortfolioDOM {
+    title: string;
+    subtitle: string;
+    note1: string;
+    note2: string;
+    note2Link: string;
+}
+
+export interface IFooterDOM {
+    title: string;
+    subtitle: string;
+    linksTitle: string;
+    telLabel: string;
+    telNumber: string;
+    telForLink: string;
+    form: IFooterFormDOM;
+}
+
+export interface IFooterFormDOM {
+    mainLabel: string;
+    nameLabel: string;
+    emailLabel: string;
+    messageLabel: string;
+    privacyLabel: string;
+    privacyLink: string;
+    buttonText: string;
+    sendSuccess: string;
+    sendError: string;
+}
