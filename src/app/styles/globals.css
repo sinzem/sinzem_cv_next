@@ -4,6 +4,12 @@
 
   --actayReg: var(--actayReg, sans-serif);
   --actayWide: var(--actayWide, sans-serif);
+  color-scheme: light;
+}
+
+.dark {
+  background-color: #171717;
+  color-scheme: dark;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,6 +23,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  position: relative;
 }
 
 body {
