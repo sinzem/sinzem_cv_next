@@ -1,4 +1,7 @@
 :root {
+
+  --menu-color: #9c9c9c;
+
   --background: #ffffff;
   --foreground: #171717;
 
@@ -8,6 +11,9 @@
 }
 
 .dark {
+
+  --menu-color: #cd8506;
+
   background-color: #171717;
   color-scheme: dark;
 }

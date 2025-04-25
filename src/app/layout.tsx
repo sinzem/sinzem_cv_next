@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Скрипт для предотвращения мерцания с измененной темой при загрузке*/}
+        {/* Скрипт для предотвращения мерцания с измененной цветовой темой при загрузке*/}
         <script
           dangerouslySetInnerHTML={{
             __html: `
