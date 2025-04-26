@@ -127,10 +127,6 @@
     background: bottom;
 }
 
-.divider {
-
-}
-
 .divider_top {
     position: absolute;
     height: 32px;
@@ -260,5 +256,12 @@
     line-height: 34px;
     background: bottom;
     font-size: 12px;
+}
+
+@media (max-width: 991px) {
+    .lang_wrapper {
+        width: 50px;
+        height: 50px;
+    }
 }
 

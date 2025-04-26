@@ -17,6 +17,11 @@ const Settings = (): ReactElement => {
     const [langActive, setLangActive] = useState<boolean>(false);
 
     const pathname = usePathname();
+
+    const hideMenu = () => {
+        setNavigationActive(false);
+        setLangActive(false);
+    }
  
     const changeRoot = (): void => {
         const root = document.querySelector(":root");
@@ -27,9 +32,10 @@ const Settings = (): ReactElement => {
             root?.classList.remove("dark");
             localStorage.removeItem("theme");
         }
+        hideMenu();
     }
 
-   
+
     return (
         <div 
             className={`
@@ -93,11 +99,12 @@ const Settings = (): ReactElement => {
                                 <div></div>
                             </div>
                             <div 
+                                onClick={hideMenu}
                                 className={`
                                     ${styles.lang_item} 
                                     ${styles.lang_item_top} 
                                     ${langActive ? styles.top_active : styles.top_inactive}
-                                `}>
+                            `}>
                                 {(pathname === "/" || pathname === "/ru") &&
                                     <Link className={styles.lang_link} href="/ua">UA</Link>
                                 }
@@ -105,7 +112,9 @@ const Settings = (): ReactElement => {
                                     <Link className={styles.lang_link}  href="/">EN</Link>
                                 }
                             </div>
-                            <div className={`
+                            <div
+                                onClick={hideMenu}   
+                                className={`
                                 ${styles.lang_item} 
                                 ${styles.lang_item_bottom} 
                                 ${langActive ? styles.bottom_active : styles.bottom_inactive}

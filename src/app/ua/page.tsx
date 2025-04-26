@@ -3,23 +3,19 @@ import languages from "../../languages/languages";
 import styles from "../styles/page.module.css";
 
 import metadataGenerate from "../../libs/metadataGenerate";
-import Link from "next/link";
+import Aside from "@/components/Aside/Aside";
+import Header from "@/components/Header/Header";
 
 export const metadata: Metadata = metadataGenerate("ua");
 
 export default async function HomeUa() {
 
-  const {header} = languages("ua");
+  const lang = languages("ua");
 
   return (
     <div className={styles.page}>
-      <h1>{header.title}</h1>
-      <Link href="/">
-        <button>En</button>
-      </Link>
-      <Link href="/ru">
-        <button>Ru</button>
-      </Link>
+      <Aside aside={lang.aside} />
+      <Header header={lang.header}/>
     </div>
   );
 }
