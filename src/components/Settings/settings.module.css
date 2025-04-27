@@ -5,6 +5,7 @@
     left: 4vw;
     background: bottom;
     cursor: pointer;
+    z-index: 10;
 }
 
 .nav_inactive {
@@ -185,12 +186,9 @@
     height: 32px;
     width: 32px;
     border-radius: 50%;
-    background-color: #000;
+    background: #000;
     display: flex;
     justify-content: center;
-}
-
-.lang_item {
     text-decoration: none;
     color: var(--menu-color);
     line-height: 34px;

@@ -11,16 +11,21 @@ const Header = ({header}: {header: IHeaderDOM}): ReactElement => {
         <div className={styles.header}>
             <Image className={styles.main_photo} src={mainPhoto} alt="my-photo" />
             <div className={styles.wrapper}>
-                <h1 className={styles.title}>{header.title}</h1>
-                <h2 className={styles.subtitle}>{header.subtitle}</h2>
+                <h1 className={`subtitle ${styles.subtitle}`}>{header.title}</h1>
+                <h2 className={`title ${styles.title}`}>{header.subtitle}</h2>
                 <div className={styles.buttons}>
-                    <a href="#cases" className="btn header-block__btn">Portfolio</a>
-                    <a href="#footer" className="btn header-block__btn">Contacts</a>
+                    <button>
+                        <a href="#cases" className={`btn ${styles.btn}`}>{header.leftBtn}</a>
+                    </button>
+                    <button>
+                        <a href="#footer" className={`btn ${styles.btn}`}>{header.rightBtn}</a>
+                    </button>
                 </div>
             </div>
-            {/* <a class="freelancehunt" href="https://freelancehunt.com/freelancer/sergzerg3.html?from=shield&r=ZyYyv" target="_blank">
-            <img src="https://freelancehunt.com/shields/display/id/1596070/type/rating?style=plastic&amp;lang=uk&amp;showName=1" alt="Freelancehunt — простий та чесний фриланс"></a> */}
-            {/* <div class="divider-section"></div> */}
+            <a className={styles.freelancehunt} href="https://freelancehunt.com/freelancer/sergzerg3.html?from=shield&r=ZyYyv" target="_blank">
+                <img src="https://freelancehunt.com/shields/display/id/1596070/type/rating?style=plastic&amp;lang=uk&amp;showName=1" alt="Freelancehunt — простий та чесний фриланс" />
+            </a> 
+            <div className={"divider_component"}></div>
         </div>
     );
 };
