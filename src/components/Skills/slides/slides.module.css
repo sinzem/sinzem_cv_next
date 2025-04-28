@@ -1,0 +1,89 @@
+.slide {
+    display: none;
+    width: 560px;
+    height: fit-content;
+    position: absolute;
+}
+
+
+.hard {
+    left: -560px;
+    top: 0px;
+}
+
+.hard.active {
+    display: block;
+    animation: slide-hard-active .5s ease forwards;
+}
+    @keyframes slide-hard-active {0% {left: -560px; opacity: 0;}100% {left: 0px; opacity: 1;}}
+
+.hard:not(.active) {
+    animation: slide-hard-hide .5s ease forwards;
+}
+    @keyframes slide-hard-hide {0% {display:block;left: 0px;top: 0px; opacity: 1;}100% {left: 0px;top: 560px; opacity: 0; display:none;}}
+
+.hard.active .content_block_top {
+    animation: top-hard-shift .7s ease forwards;
+}
+    @keyframes top-hard-shift {0% {transform: translateX(-250px);} 100% {transform: translateX(0px)}}
+
+.hard.active .content_block_bottom {
+    animation: bottom-hard-shift .8s ease forwards;
+}
+    @keyframes bottom-hard-shift {0% {transform: translateX(-250px);} 100% {transform: translateX(0px)}}
+
+
+.soft {
+    left: 0px;
+    top: -560px;
+}
+
+.soft.active {
+    display: block;
+    animation: slide-soft-active .5s ease forwards;
+}
+    @keyframes slide-soft-active {0% {top: -560px; opacity: 0;}100% {top: 0px; opacity: 1;}}
+
+.soft:not(.active) {
+    animation: slide-soft-hide .5s ease forwards;
+}
+    @keyframes slide-soft-hide {0% {display:block;left: 0px;top: 0px; opacity: 1;}100% {left: 0px;top: 560px; opacity: 0; display:none;}}
+
+.soft.active .content_block_top {
+    animation: top-soft-shift .7s ease forwards;
+}
+    @keyframes top-soft-shift {0% {transform: translateY(-250px);} 100% {transform: translateY(0px)}}
+
+.soft.active .content_block_bottom {
+    animation: bottom-soft-shift .8s ease forwards;
+}
+    @keyframes bottom-soft-shift {0% {transform: translateY(-250px);} 100% {transform: translateY(0px)}}
+
+
+.general {
+    right: -560px;
+    top: 0px;
+}
+
+.general.active {
+    display: block;
+    animation: slide-general-active .5s ease forwards;
+}
+    @keyframes slide-general-active {0% {right: -560px; opacity: 0;}100% {right: 0px; opacity: 1;}}
+
+.general:not(.active) {
+    animation: slide-general-hide .5s ease forwards;
+}
+    @keyframes slide-general-hide {0% {display:block;right: 0px;top: 0px; opacity: 1;}100% {right: 0px;top: 560px; opacity: 0; display:none;}}
+
+.general.active .content__block_top {
+    animation: top-general-shift .7s ease forwards;
+}
+    @keyframes top-general-shift {0% {transform: translateX(250px);} 100% {transform: translateX(0px)}}
+
+.general.active .content__block_bottom {
+    animation: bottom-general-shift .8s ease forwards;
+}
+    @keyframes bottom-general-shift {0% {transform: translateX(250px);} 100% {transform: translateX(0px)}}
+
+

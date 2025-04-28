@@ -56,11 +56,13 @@ export interface IAboutDOM {
 export interface IHardDOM {
     title: string;
     descriptionTop: string;
+    descriptionTopMobile: string;
     skillTop1: string;
     skillTop2: string;
     skillTop3: string;
     skillTop4: string;
     descriptionBottom: string;
+    descriptionBottomMobile: string;
     skillBottom1: string;
     skillBottom2: string;
     skillBottom3: string;
@@ -92,6 +94,8 @@ export interface IGeneralDOM {
     skillBottom1: string;
     skillBottom2: string;
     skillBottom3: string;
+    telNumber: string;
+    telForLink: string;
 }
 
 export interface IPortfolioDOM {

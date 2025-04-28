@@ -1,0 +1,1 @@
+export type ISlides = "hard" | "soft" | "general";

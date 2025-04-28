@@ -18,10 +18,10 @@ const Aside = ({aside}: {aside: IAsideDOM}): ReactElement => {
             <Link href="https://t.me/sinzem83" className={styles.link} >
                 <TelegramIcon className={styles.icon} />
             </Link>
-            <Link href="https://www.instagram.com/sinzem83/" className={styles.link}>
-                <InstagramIcon className={styles.icon} transform={"rotate(-90deg)"}/>
+            <Link href="https://www.instagram.com/sinzem83/" className={styles.link} >
+                <InstagramIcon className={styles.icon} />
             </Link>
-            <Link href="https://www.facebook.com/sinzem/" className={styles.link}>
+            <Link href="https://www.facebook.com/sinzem/" className={styles.link} >
                 <FacebookIcon className={styles.icon} />
             </Link>
         </aside>
