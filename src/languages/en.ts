@@ -60,7 +60,7 @@ export const en: ILanguageDOM = {
             skillTop3: "Learning ability",
             skillTop4: "Good written and verbal communication skills",
             skillTop5: "Desire to work and earn money",
-            descriptionBottom: "English level",
+            descriptionBottom: "My English level",
             skillBottom1: "A2/B1",
             skillBottom2: "(continuing education)",
         },

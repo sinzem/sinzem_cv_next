@@ -13,7 +13,10 @@ const General = ({
         <div className={`
             ${styles.slide} 
             ${styles.general} 
-            ${activity === "general" ? "active" : ""}    
+            ${activity === "general" 
+                ? styles.general_active 
+                : styles.general_inactive 
+            }    
         `}>
             <h3 className="title skills__slider__title">{general.title}</h3>
             <div className="skills__content skills__content__general">
