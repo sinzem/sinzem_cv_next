@@ -14,12 +14,12 @@ const Header = ({header}: {header: IHeaderDOM}): ReactElement => {
                 <h1 className={`subtitle ${styles.subtitle}`}>{header.title}</h1>
                 <h2 className={`title ${styles.title}`}>{header.subtitle}</h2>
                 <div className={styles.buttons}>
-                    <button>
+                    {/* <button> */}
                         <a href="#cases" className={`btn ${styles.btn}`}>{header.leftBtn}</a>
-                    </button>
-                    <button>
+                    {/* </button> */}
+                    {/* <button> */}
                         <a href="#footer" className={`btn ${styles.btn}`}>{header.rightBtn}</a>
-                    </button>
+                    {/* </button> */}
                 </div>
             </div>
             <a className={styles.freelancehunt} href="https://freelancehunt.com/freelancer/sergzerg3.html?from=shield&r=ZyYyv" target="_blank">

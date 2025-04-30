@@ -21,5 +21,25 @@
     z-index: 5;
 }
 
+.btn_mob {
+    display: none;
+}
 
+@media (max-width: 575.99px) {
+    .slider {
+        max-width: 280px;
+        height: 484px;
+    }
+
+    .btn_desc {
+        display: none;
+    }
+
+    .btn_mob {
+        display: block;
+        left: 0;
+        width: fit-content;
+        padding: 20px 10px;
+    }
+}
 

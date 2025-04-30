@@ -23,10 +23,16 @@ const Slider = ({about}: {about: IAboutDOM}): ReactElement => {
         <div className={styles.slider}>
              {/* <div className={styles.slider_wrap}>    */}
                 <button 
-                    className={`btn ${styles.btn_next}`}
+                    className={`btn ${styles.btn_next} ${styles.btn_desc}`}
                     onClick={changeActiveSlide}  
                 >
                     Next
+                </button>
+                <button 
+                    className={`btn ${styles.btn_next} ${styles.btn_mob}`}
+                    onClick={changeActiveSlide} 
+                >
+                    N<br/>e<br/>x<br/>t
                 </button>
                 <Hard hard={about.hard} activity={activity} />
                 <Soft soft={about.soft} activity={activity} />

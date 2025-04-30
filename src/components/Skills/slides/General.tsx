@@ -25,6 +25,7 @@ const General = ({
                     <ul className={`${styles.list} ${styles.list_general_top}`}>
                         <li>{general.skillTop1}</li>
                         <li>{general.skillTop2}
+                            <span className={styles.space}></span>
                             <a href={general.telForLink}>{general.telNumber}</a>
                         </li>
                         <li>{general.skillTop3}</li>
