@@ -1,8 +1,8 @@
 .slider {
     position: relative;
-    height: 370px;
+    height: 420px;
     width: 560px;
-    overflow: hidden;
+    overflow: hidden; 
     margin: 0 auto;
 }
 
@@ -12,11 +12,14 @@
 
 .btn_next {
     position: absolute;
-    top: 66px;
-    left: calc(50% + 248px);
-    padding: 20px 10px;
+    bottom: 0px;
+    right: 0px;
+    padding: 10px 30px;
     font-weight: bold;
     line-height: 1.1;
+    letter-spacing: 3px;
     z-index: 5;
 }
+
+
 

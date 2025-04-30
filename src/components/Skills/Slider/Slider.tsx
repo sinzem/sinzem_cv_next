@@ -26,7 +26,7 @@ const Slider = ({about}: {about: IAboutDOM}): ReactElement => {
                     className={`btn ${styles.btn_next}`}
                     onClick={changeActiveSlide}  
                 >
-                    N<br/>e<br/>x<br/>t
+                    Next
                 </button>
                 <Hard hard={about.hard} activity={activity} />
                 <Soft soft={about.soft} activity={activity} />
