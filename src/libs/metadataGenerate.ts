@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import languages from "../languages/languages";
+import languages from "../assets/languages/languages";
 import { IPossibleLanguage } from "@/types/language";
 
 const metadataGenerate = (langId: IPossibleLanguage): Metadata => {

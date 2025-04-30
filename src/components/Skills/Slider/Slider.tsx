@@ -2,12 +2,14 @@
 
 import { ReactElement, useState } from 'react';
 
-import styles from "./slider.module.css";
 import { IAboutDOM } from '@/types/language';
+import { ISlides } from '@/types/slider';
 import Hard from '../slides/Hard';
 import Soft from '../slides/Soft';
 import General from '../slides/General';
-import { ISlides } from '@/types/slider';
+
+import styles from "./slider.module.css";
+
 
 const Slider = ({about}: {about: IAboutDOM}): ReactElement => {
 
@@ -21,23 +23,21 @@ const Slider = ({about}: {about: IAboutDOM}): ReactElement => {
 
     return (
         <div className={styles.slider}>
-             {/* <div className={styles.slider_wrap}>    */}
-                <button 
-                    className={`btn ${styles.btn_next} ${styles.btn_desc}`}
-                    onClick={changeActiveSlide}  
-                >
-                    Next
-                </button>
-                <button 
-                    className={`btn ${styles.btn_next} ${styles.btn_mob}`}
-                    onClick={changeActiveSlide} 
-                >
-                    N<br/>e<br/>x<br/>t
-                </button>
-                <Hard hard={about.hard} activity={activity} />
-                <Soft soft={about.soft} activity={activity} />
-                <General general={about.general} activity={activity} />
-            {/* </div> */}
+            <button 
+                className={`btn ${styles.btn_next} ${styles.btn_desc}`}
+                onClick={changeActiveSlide}  
+            >
+                Next
+            </button>
+            <button 
+                className={`btn ${styles.btn_next} ${styles.btn_mob}`}
+                onClick={changeActiveSlide} 
+            >
+                N<br/>e<br/>x<br/>t
+            </button>
+            <Hard hard={about.hard} activity={activity} />
+            <Soft soft={about.soft} activity={activity} />
+            <General general={about.general} activity={activity} />
         </div>
        
     );

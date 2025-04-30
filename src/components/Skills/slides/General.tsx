@@ -1,7 +1,9 @@
+import { ReactElement } from "react";
+
 import { IGeneralDOM } from "@/types/language";
-import styles from "./slides.module.css";
 import { ISlides } from "@/types/slider";
-// import Link from "next/link";
+
+import styles from "./slides.module.css";
 
 const General = ({
     general,
@@ -9,7 +11,7 @@ const General = ({
 }: {
     general: IGeneralDOM,
     activity: ISlides
-}) => {
+}): ReactElement => {
     return (
         <div className={`
             ${styles.slide} 

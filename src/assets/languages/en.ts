@@ -1,14 +1,14 @@
-import { ILanguageDOM } from "../types/language";
+import { ILanguageDOM } from "../../types/language";
 
 export const en: ILanguageDOM = {
     head: {
-        canonical: "https://sinzem.github.io",
+        canonical: "https://cv-next-six.vercel.app/",
         title: "Curriculum vitae",
         description: "Resume for front-end developer position",
         keywords: "Resume, Curriculum vitae, Front-end developer, Kharkiv, JavaScript, React",
         openGraph: {
             type: "website",
-            url: 'http://sinzem.github.io',
+            url: 'https://cv-next-six.vercel.app/',
             title: 'Curriculum vitae',
             description: 'Resume for front-end developer position. JavaScript + React',
             images: [

@@ -15,13 +15,13 @@ const Aside = ({aside}: {aside: IAsideDOM}): ReactElement => {
         <aside className={styles.social}>
             <div className={styles.title}>{aside.title}</div>
             <div className={styles.divider}></div>
-            <Link href="https://t.me/sinzem83" className={styles.link} >
+            <Link href="https://t.me/sinzem83" target="_blank" className={styles.link} >
                 <TelegramIcon className={styles.icon} />
             </Link>
-            <Link href="https://www.instagram.com/sinzem83/" className={styles.link} >
+            <Link href="https://www.instagram.com/sinzem83/" target="_blank" className={styles.link} >
                 <InstagramIcon className={styles.icon} />
             </Link>
-            <Link href="https://www.facebook.com/sinzem/" className={styles.link} >
+            <Link href="https://www.facebook.com/sinzem/" target="_blank" className={styles.link} >
                 <FacebookIcon className={styles.icon} />
             </Link>
         </aside>

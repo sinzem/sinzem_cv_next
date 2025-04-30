@@ -1,10 +1,35 @@
+import { ReactElement } from "react";
 import styles from "./cases.module.css";
+import { IPortfolioDOM } from "@/types/language";
+import { mainCases } from "@/assets/cases/main";
+import Case from "../Case/Case";
 
-const Cases = () => {
+const Cases = ({cases} : {cases: IPortfolioDOM}): ReactElement => {
+
+    
+
     return (
-        <div className={styles.cases}>
+        <section id="cases" className={styles.cases}>
+            <h3 className={`subtitle ${styles.subtitle}`}>{cases.title}</h3>
+            <h2 className={`title ${styles.subtitle}`}>{cases.subtitle}</h2>
             
-        </div>
+            <div className={`divider ${styles.divider}`}></div>
+            
+            <div className={styles.items}>
+                {mainCases.map(item => (
+                    <div key={item.id}>
+                        <Case item={item}/>
+                    </div>
+                ))}
+            </div>
+
+            <div className={styles.clarification}>
+                <h3>{cases.note1}</h3>
+                <h3>{cases.note2} <a href="https://github.com/sinzem" target="_blank"> {cases.note2Link}</a></h3>
+            </div>
+            {/* <div className={"offset"}></div> */}
+            <div className={"divider_component"}></div>
+        </section>    
     );
 };
 

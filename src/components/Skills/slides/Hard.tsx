@@ -1,7 +1,10 @@
-import { IHardDOM } from "@/types/language";
-import styles from "./slides.module.css";
 import { ReactElement } from "react";
+
+import { IHardDOM } from "@/types/language";
 import { ISlides } from "@/types/slider";
+
+import styles from "./slides.module.css";
+
 
 const Hard = ({
     hard,

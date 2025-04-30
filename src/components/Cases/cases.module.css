@@ -1,0 +1,38 @@
+.cases {
+    height: fit-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 10vw;
+}
+
+.items {
+    display: flex;
+    margin-top: 40px;
+    width: 90vw;
+    justify-content: center;
+    perspective: calc(var(--index) * 75); 
+}
+
+.clarification {
+    margin-top: 50px;
+    transform: translateX(50%);
+    text-align: end;
+}
+
+.clarification h3 {
+    margin-top: 5px;
+}
+.clarification a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--main-color);
+    transition: all 0.15s linear;
+}
+
+.clarification a:hover {
+    transform: translateY(-2px);
+    color: var(--hover-color);
+}

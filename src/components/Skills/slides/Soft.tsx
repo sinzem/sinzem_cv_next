@@ -1,7 +1,10 @@
-import { ISoftDOM } from "@/types/language";
-import styles from "./slides.module.css";
 import { ReactElement } from "react";
+
+import { ISoftDOM } from "@/types/language";
 import { ISlides } from "@/types/slider";
+
+import styles from "./slides.module.css";
+
 
 const Soft = ({
     soft,
