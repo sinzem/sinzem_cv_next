@@ -1,8 +1,9 @@
 import { ReactElement } from "react";
 import styles from "./cases.module.css";
 import { IPortfolioDOM } from "@/types/language";
-import { mainCases } from "@/assets/cases/main";
-import Case from "../Case/Case";
+import CasesBlock from "../CasesBlock/CasesBlock";
+// import { mainCases } from "@/assets/cases/main";
+// import Case from "../Case/Case";
 
 const Cases = ({cases} : {cases: IPortfolioDOM}): ReactElement => {
 
@@ -15,13 +16,14 @@ const Cases = ({cases} : {cases: IPortfolioDOM}): ReactElement => {
             
             <div className={`divider ${styles.divider}`}></div>
             
-            <div className={styles.items}>
+            {/* <div className={styles.items}>
                 {mainCases.map(item => (
                     <div key={item.id}>
                         <Case item={item}/>
                     </div>
                 ))}
-            </div>
+            </div> */}
+            <CasesBlock />
 
             <div className={styles.clarification}>
                 <h3>{cases.note1}</h3>
