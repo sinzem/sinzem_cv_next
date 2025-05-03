@@ -9,13 +9,16 @@ import Link from 'next/link';
 const CasesBlockMobile = (): ReactElement => {
 
 
-    // const [casesList, setCasesList] = useState([]);
+    const [casesList, setCasesList] = useState<NodeListOf<Element> | null>(null);
     // const [dotForScale, setDotForScale] = useState(0);
     const [activeCase, setActiveCase] = useState<string | null>(null);
 
+    useEffect(() => {
+        getDotAndCases();
+    }, [])
 
     useEffect(() => {
-        const cases = document.querySelectorAll(".items");
+        // const cases = document.querySelectorAll(".items");
         
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -29,10 +32,10 @@ const CasesBlockMobile = (): ReactElement => {
             threshold: 0.5
         });
         
-        cases.forEach(item => observer.observe(item));
+        casesList?.forEach(item => observer.observe(item));
         
         return () => observer.disconnect();
-      }, []);
+      }, [casesList]);
  
  
 
@@ -42,6 +45,11 @@ const CasesBlockMobile = (): ReactElement => {
         console.log(activeCase);
   
    }, [activeCase])
+
+     const getDotAndCases = () => {
+        setCasesList(document.querySelectorAll(".item"));
+        // setDotForScale(document.querySelector("#dotForScale").offsetTop);
+    }
 
 
 
