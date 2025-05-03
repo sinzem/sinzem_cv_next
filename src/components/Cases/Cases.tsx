@@ -2,12 +2,9 @@ import { ReactElement } from "react";
 import styles from "./cases.module.css";
 import { IPortfolioDOM } from "@/types/language";
 import CasesBlock from "../CasesBlock/CasesBlock";
-// import { mainCases } from "@/assets/cases/main";
-// import Case from "../Case/Case";
+
 
 const Cases = ({cases} : {cases: IPortfolioDOM}): ReactElement => {
-
-    
 
     return (
         <section id="cases" className={styles.cases}>
@@ -16,20 +13,13 @@ const Cases = ({cases} : {cases: IPortfolioDOM}): ReactElement => {
             
             <div className={`divider ${styles.divider}`}></div>
             
-            {/* <div className={styles.items}>
-                {mainCases.map(item => (
-                    <div key={item.id}>
-                        <Case item={item}/>
-                    </div>
-                ))}
-            </div> */}
             <CasesBlock />
 
             <div className={styles.clarification}>
                 <h3>{cases.note1}</h3>
                 <h3>{cases.note2} <a href="https://github.com/sinzem" target="_blank"> {cases.note2Link}</a></h3>
             </div>
-            {/* <div className={"offset"}></div> */}
+          
             <div className={"divider_component"}></div>
         </section>    
     );
