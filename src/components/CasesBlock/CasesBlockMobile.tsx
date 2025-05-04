@@ -1,31 +1,31 @@
 "use client";
 
 import { ReactElement, useEffect, useState } from 'react';
+import Link from 'next/link';
 
 import styles from "./casesBlockMobile.module.css";
 import { mainCases } from "@/assets/cases/main";
-import Link from 'next/link';
 
 const CasesBlockMobile = (): ReactElement => {
 
-
     const [casesList, setCasesList] = useState<NodeListOf<Element> | null>(null);
-    // const [dotForScale, setDotForScale] = useState(0);
     const [activeCase, setActiveCase] = useState<string | null>(null);
 
     useEffect(() => {
-        getDotAndCases();
+        getCases();
+
+        window.addEventListener("resize", getCases);
+
+        return () => window.removeEventListener("resize", getCases);
     }, [])
 
     useEffect(() => {
-        
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) { 
                     setActiveCase(entry.target.id);
                 }
             });
-   
         }, {
             rootMargin: "-48% 0px -30% 0px",
             threshold: 0.5
@@ -34,26 +34,18 @@ const CasesBlockMobile = (): ReactElement => {
         casesList?.forEach(item => observer.observe(item));
         
         return () => observer.disconnect();
-      }, [casesList]);
+    }, [casesList]);
  
  
-
-   useEffect(() => {
-        // console.log(casesList);
-        // console.log(dotForScale);
-        console.log(activeCase);
-  
-   }, [activeCase])
-
-    const getDotAndCases = () => {
+    const getCases = () => {
         setCasesList(document.querySelectorAll(".item"));
     }
-
 
 
     return (
         <div id="items" className={styles.items} >
             <div id="dotForScale" className={styles.offset}></div>
+            <div className={"item"}></div>
             <div id={mainCases[0].id} className={`item ${styles.item} ${activeCase === mainCases[0].id ? styles.active : ""}`}  >
                 <div className={styles.item_internal} style={{backgroundImage: `url(${mainCases[0].url})`}}>
                     <Link className={styles.link} target="_blank" href={mainCases[0].link}></Link>
@@ -130,6 +122,7 @@ const CasesBlockMobile = (): ReactElement => {
                     <Link className={styles.link} target="_blank" href={mainCases[14].link}></Link>
                 </div>
             </div> */}
+            <div className={"item"}></div>
         </div>
     );
 };

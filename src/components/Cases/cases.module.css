@@ -36,3 +36,12 @@
     transform: translateY(-2px);
     color: var(--hover-color);
 }
+
+@media (max-width: 1199.4px) {
+    .clarification {
+        transform: translateX(0%);
+        max-width: 300px;
+        margin: 40px auto 0;
+        padding: 10px;
+    }
+}
