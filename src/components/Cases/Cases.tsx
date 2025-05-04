@@ -8,7 +8,7 @@ const Cases = ({cases} : {cases: IPortfolioDOM}): ReactElement => {
 
     return (
         <section id="cases" className={styles.cases}>
-            <h3 className={`subtitle ${styles.subtitle}`}>{cases.title}</h3>
+            <h3 className={`subtitle subtitle_main ${styles.subtitle}`}>{cases.title}</h3>
             <h2 className={`title ${styles.subtitle}`}>{cases.subtitle}</h2>
             
             <div className={`divider ${styles.divider}`}></div>

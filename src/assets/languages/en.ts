@@ -89,7 +89,7 @@ export const en: ILanguageDOM = {
         title: "My contacts",
         subtitle: "Contact me",
         linksTitle: "In any way convenient for you:",
-        telLabel: "Tel:",
+        telLabel: "Tel: ",
         telNumber: "+38 (093) 410-45-12",
         telForLink: "tel:+380934104512",
         form: {
@@ -97,7 +97,7 @@ export const en: ILanguageDOM = {
             nameLabel: "Your name:",
             emailLabel: "Your E-mail:",
             messageLabel: "Your message:",
-            privacyLabel: "I agree with",
+            privacyLabel: "I agree with ",
             privacyLink: "the privacy policy",
             buttonText: "Send message",
             sendSuccess: "Thanks! The message was sent successfully",

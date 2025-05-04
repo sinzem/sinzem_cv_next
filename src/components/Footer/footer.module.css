@@ -1,0 +1,64 @@
+.footer {
+    width: 100%;
+}
+
+.wrapper {
+    width: 100%;
+    padding: 80px 10vw;
+}
+
+.text {
+    margin-top: 35px;
+}
+
+.social {
+    margin: 25px auto 0;
+    display: block;
+    width: max-content;
+}
+
+.social a {
+    display: inline-block;
+}
+
+.social a:not(:first-child) {
+    transform: rotate(90deg);
+}   
+
+.link {
+    margin: 0 15px;
+}
+
+.link svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--color-text); 
+}
+
+.link svg:hover {
+    transform: scale(1.2);
+    transition: 0.5s all;
+}
+
+.link svg:hover path {
+    fill: var(--main-color);
+}
+
+.tel a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+@media (max-width: 767px) {
+    
+    .wrapper {
+        padding: 80px 10vw 60px;
+    }
+
+    .text {
+        width: 260px;
+        margin: 25px auto 0;
+    }
+}
+
+
