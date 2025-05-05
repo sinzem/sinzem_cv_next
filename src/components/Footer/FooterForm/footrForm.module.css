@@ -91,3 +91,28 @@
     color: var(--hover-color);
 }
 
+@media (max-width: 767px) { 
+
+    .form {
+        width: 260px;
+    }
+
+    .text {
+        width: 260px;
+        margin: 25px auto 0;
+    }
+    
+    .triggers {
+        grid-template: auto auto / 1fr;
+        row-gap: 10px;
+        justify-items: end;
+    }
+
+    .btn {
+        grid-row: 2 / 3;
+    }
+
+    .policy input {
+        margin-bottom: 2px;
+    }
+}
