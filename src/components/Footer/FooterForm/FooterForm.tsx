@@ -39,6 +39,11 @@ const FooterForm = ({
         if (!nameForSend.length || nameForSend.length < 2) {
             setSendState("name");
             setLoadState(false)
+            return;
+        }
+        if (!policyInput) {
+            setSendState("policy");
+            return;
         }
     }   
 
@@ -72,6 +77,13 @@ const FooterForm = ({
                         value={emailInput} 
                         onChange={(e) => setEmailInput(e.target.value)} 
                     />
+                    {sendState && sendState === "email" && 
+                        <MessageModal 
+                            loading={loadState} 
+                            text={footerForm.sendEmailError} 
+                            setter={setSendState} 
+                        />
+                    }
                 </div>
             </div>
             <div className={styles.textarea}>
@@ -82,6 +94,13 @@ const FooterForm = ({
                     value={textInput} 
                     onChange={(e) => setTextInput(e.target.value)} 
                 ></textarea>
+                {sendState && sendState === "textArea" && 
+                    <MessageModal 
+                        loading={loadState} 
+                        text={footerForm.sendTextError} 
+                        setter={setSendState} 
+                    />
+                }
             </div>
             <div className={styles.triggers}>
                 <button className={`btn ${styles.btn}`}>{footerForm.buttonText}</button>
@@ -96,6 +115,13 @@ const FooterForm = ({
                     <label htmlFor="checkbox">{footerForm.privacyLabel}
                         <Link href="/privacy">{footerForm.privacyLink}</Link>
                     </label>
+                    {sendState && sendState === "policy" && 
+                        <MessageModal 
+                            loading={loadState} 
+                            text={footerForm.sendPrivacyError} 
+                            setter={setSendState} 
+                        />
+                    }
                 </div>
             </div>
         </form>
