@@ -1,6 +1,6 @@
 "use client";
 
-import {Dispatch, ReactElement, SetStateAction, useState} from 'react';
+import {ReactElement, useState} from 'react';
 
 import styles from "./footerForm.module.css";
 import { IFooterFormDOM } from '@/types/language';
@@ -34,9 +34,11 @@ const FooterForm = ({
 
     const sendMessasge = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        e.stopPropagation();
         const nameForSend = sanitizeText(nameInput.trim());
         if (!nameForSend.length || nameForSend.length < 2) {
             setSendState("name");
+            setLoadState(false)
         }
     }   
 
