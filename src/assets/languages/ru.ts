@@ -101,7 +101,11 @@ export const ru: ILanguageDOM = {
             privacyLink: "privacy policy",
             buttonText: "Отправить сообщение",
             sendSuccess: "Спасибо! Сообщение успешно отправлено",
-            sendError: "Очень жаль, что-то пошло не так...",
+            sendUnknownError: "Извините, произошла ошибка... Попробуйте позже",
+            sendNameError: "Введите валидное имя",
+            sendEmailError: "Введите ввалидный email",
+            sendTextError: "Введите ваше сообщение",
+            sendPrivacyError: "Нужно согласие на обработку данных",
         }
     },
 }

@@ -101,7 +101,11 @@ export const en: ILanguageDOM = {
             privacyLink: "the privacy policy",
             buttonText: "Send message",
             sendSuccess: "Thanks! The message was sent successfully",
-            sendError: "Sorry, an error has occurred...",
+            sendUnknownError: "Sorry, an error has occurred... Try later",
+            sendNameError: "Enter valid name",
+            sendEmailError: "Enter valid email",
+            sendTextError: "Enter your message",
+            sendPrivacyError: "Your consent to data processing is required",
         }
     },
 }

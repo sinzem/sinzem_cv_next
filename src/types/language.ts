@@ -125,5 +125,9 @@ export interface IFooterFormDOM {
     privacyLink: string;
     buttonText: string;
     sendSuccess: string;
-    sendError: string;
+    sendUnknownError: string;
+    sendNameError: string;
+    sendEmailError: string;
+    sendTextError: string;
+    sendPrivacyError: string;
 }

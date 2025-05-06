@@ -1,0 +1,1 @@
+export type IFooterFormState = "name" | "email" | "textArea" | "policy" | "unknown" | "success" | null;

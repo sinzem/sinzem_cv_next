@@ -101,7 +101,11 @@ export const ua: ILanguageDOM = {
             privacyLink: "privacy policy",
             buttonText: "Надіслати повідомлення",
             sendSuccess: "Дякую! Повідомлення успішно відправлено",
-            sendError: "Дуже шкода, щось пішло не так...",
+            sendUnknownError: "Вибачте, сталася помилка... Спробуйте пізніше",
+            sendNameError: "Введіть валідне ім'я",
+            sendEmailError: "Введіть валідний email",
+            sendTextError: "Введіть ваше повідомлення",
+            sendPrivacyError: "Потрібна згода на обробку даних",
         }
     },
 }

@@ -5,6 +5,7 @@
 
 .input {
     display: block;
+    position: relative;
 }
 
 .input_wrap {
@@ -36,6 +37,7 @@
 }
 
 .textarea {
+    position: relative;
     margin-top: 15px;
     width: 100%; 
 }
