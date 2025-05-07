@@ -1,11 +1,13 @@
 "use client";
 
 import { Dispatch, ReactElement, SetStateAction, useEffect, useState } from 'react';
+import Image from 'next/image';
+
+import { IFooterFormState } from '@/types/footerForm';
 
 import styles from "./messageModal.module.css";
 import LoaderGif from "../../../assets/icons/loader.gif";
-import Image from 'next/image';
-import { IFooterFormState } from '@/types/footerForm';
+
 
 const MessageModal = ({
     loading = false,
@@ -22,8 +24,6 @@ const MessageModal = ({
     const [visible, setVisible] = useState<boolean>(true);
 
     useEffect(() => {
-        // setVisible(true);
-
         const timeout = setTimeout(() => hideModal(), 3000);
 
         return () => clearTimeout(timeout);
@@ -48,8 +48,8 @@ const MessageModal = ({
     }
 
     return (
-        <div className={styles.fullscreen}>
-            <div className={styles.wrapper} onClick={() => setter(null)}>
+        <div className={`${visible ? styles.visible : styles.invisible} ${styles.fullscreen}`} >
+            <div className={styles.wrapper} onClick={hideModal}>
                 <div className={styles.message}>
                     {loading && 
                         <Image src={LoaderGif} alt="Loading..." />

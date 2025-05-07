@@ -6,8 +6,8 @@ import styles from "./footerForm.module.css";
 import { IFooterFormDOM } from '@/types/language';
 import Link from 'next/link';
 import { IFooterFormState } from '@/types/footerForm';
-import * as sanitizeHtml from 'sanitize-html';
 import MessageModal from '@/components/modals/MessageModal/MessageModal';
+import { checkEmail, sanitizeText } from '@/libs/checkers';
 
 const FooterForm = ({
     footerForm
@@ -22,34 +22,67 @@ const FooterForm = ({
     const [sendState, setSendState] = useState<IFooterFormState>(null);
     const [loadState, setLoadState] = useState<boolean>(false);
 
-    const sanitizeText = (str: string): string => {
-        const checkMessage = sanitizeHtml(str, {
-            allowedTags: ["em", "b", "i", "strong", "code", "a"],
-            allowedAttributes: {
-                a: [ 'href', "title" ],
-            },
-        });
-        return checkMessage;
-    }
-
-    const sendMessasge = (e: React.FormEvent<HTMLFormElement>) => {
+    const sendMessasge = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const nameForSend = sanitizeText(nameInput.trim());
-        if (!nameForSend.length || nameForSend.length < 2) {
-            console.log("click");
+        const trimName = nameInput.trim();
+        setNameInput(trimName);
+        if (!nameInput.trim().length || nameInput.trim().length < 2) {
             setSendState("name");
-            setLoadState(false)
             return;
         }
+        const nameToSend = sanitizeText(nameInput.trim());
+        const checkedEmail = checkEmail(emailInput);
+        if (!checkedEmail) {
+            setSendState("email");
+            return;
+        }
+        const trimText = textInput.trim();
+        setTextInput(trimText);
+        if (!trimText.length || trimText.length < 2) {
+            setSendState("textArea");
+            return;
+        }
+        const textToSend = sanitizeText(textInput.trim());
         if (!policyInput) {
             setSendState("policy");
             return;
         }
+
+        const objectToSend = {
+            name: nameToSend,
+            email: emailInput,
+            message: textToSend
+        }
+
+        try {
+            setLoadState(true);
+            const response = await fetch("/api/mail", {
+                method: "POST",
+                headers: {
+                    "Content-type": "application/json"
+                },
+                body: JSON.stringify(objectToSend)
+            });
+
+            const result = await response.json();
+
+            console.log(result);
+            setLoadState(false);
+            setSendState("success");
+        } catch {
+            setLoadState(false);
+            setSendState("unknown");
+        } finally {
+            setNameInput("");
+            setEmailInput("");
+            setTextInput("");
+            setPolicyInput(false);
+        }
     }   
 
-    
+
     return (
-        <form id="my-letter" action="#" className={styles.form} onSubmit={(e) => sendMessasge(e)} >
+        <form id="my-letter" className={styles.form} onSubmit={(e) => sendMessasge(e)} >
             <div className={styles.input_wrap}>
                 <div className={styles.input}>
                     <label htmlFor="name">{footerForm.nameLabel}</label>
@@ -70,7 +103,7 @@ const FooterForm = ({
                 <div className={styles.input}>
                     <label htmlFor="email">{footerForm.emailLabel}</label>
                     <input 
-                        type="email" 
+                        type="text" 
                         name="email" 
                         id="email" 
                         value={emailInput} 
@@ -113,7 +146,7 @@ const FooterForm = ({
                         type="checkbox" 
                         name="checkbox" 
                         id="checkbox" 
-                        value={textInput} 
+                        checked={policyInput} 
                         onChange={() => setPolicyInput(!policyInput)}
                     />
                     <label htmlFor="checkbox">{footerForm.privacyLabel}
@@ -128,6 +161,22 @@ const FooterForm = ({
                     }
                 </div>
             </div>
+            {sendState && sendState === "success" && 
+                <MessageModal 
+                    loading={loadState} 
+                    text={footerForm.sendSuccess} 
+                    position="fullscreen"
+                    setter={setSendState} 
+                />
+            }
+            {sendState && sendState === "unknown" && 
+                <MessageModal 
+                    loading={loadState} 
+                    text={footerForm.sendUnknownError} 
+                    position="fullscreen"
+                    setter={setSendState} 
+                />
+            }
         </form>
     );
 };

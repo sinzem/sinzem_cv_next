@@ -1,20 +1,15 @@
-.line {
-    position: absolute;
-    max-width: 220px;
-    right: 20px;
-    top: 80%;
+.line, .fullscreen, .wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 24px;
-    background: var(--main-color);
-    color: var(--color-text);
-    border-radius: 4px;
     z-index: 10;
 }
 
-.line h3 {
-    background: bottom;
+.line, .wrapper {
+    background: var(--main-color);
+    color: var(--color-text);
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 .fullscreen {
@@ -24,10 +19,29 @@
     top: 0;
     left: 0;
     background: rgba(0, 0, 0, .6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
+}
+
+.line {
+    position: absolute;
+    max-width: 220px;
+    right: 20px;
+    top: 80%;
+    padding: 10px 24px;
+}
+
+.line h3 {
+    background: bottom;
+    text-align: right;
+}
+
+.wrapper {
+    width: 260px;
+    height: 180px;
+    padding: 20px;
+}
+
+.wrapper h3 {
+    font-size: 16px;
 }
 
 .visible {
@@ -41,16 +55,7 @@
 @keyframes body-opacity {0% {opacity: 0;} 100% {opacity: 1;}}
 @keyframes body-not-opacity {0% {opacity: 1;} 100% {opacity: 0;}}
 
-.wrapper {
-    width: 220px;
-    height: 180px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--main-color);
-    color: var(--color-text);
-    border-radius: 4px;
-}
+
 
 .message {
     background: bottom;
