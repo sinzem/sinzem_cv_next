@@ -10,7 +10,6 @@
     background: var(--main-color);
     color: var(--color-text);
     border-radius: 4px;
-    opacity: 0;
     z-index: 10;
 }
 

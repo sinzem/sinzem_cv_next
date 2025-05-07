@@ -34,9 +34,9 @@ const FooterForm = ({
 
     const sendMessasge = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        e.stopPropagation();
         const nameForSend = sanitizeText(nameInput.trim());
         if (!nameForSend.length || nameForSend.length < 2) {
+            console.log("click");
             setSendState("name");
             setLoadState(false)
             return;
@@ -62,7 +62,6 @@ const FooterForm = ({
                     />
                     {sendState && sendState === "name" && 
                         <MessageModal 
-                            loading={loadState} 
                             text={footerForm.sendNameError} 
                             setter={setSendState} 
                         />
@@ -103,7 +102,12 @@ const FooterForm = ({
                 }
             </div>
             <div className={styles.triggers}>
-                <button className={`btn ${styles.btn}`}>{footerForm.buttonText}</button>
+                <button
+                    className={`btn ${styles.btn}`}
+                    disabled={!sendState && !loadState ? false : true}
+                >
+                    {footerForm.buttonText}
+                </button>
                 <div className={styles.policy}>
                     <input 
                         type="checkbox" 

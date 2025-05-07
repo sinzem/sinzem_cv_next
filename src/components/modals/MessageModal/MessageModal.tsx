@@ -13,16 +13,16 @@ const MessageModal = ({
     position = "line",
     setter,
 }: {
-    loading: boolean,
+    loading?: boolean,
     text: string,
     position?: "line" | "fullscreen",
-    setter: Dispatch<SetStateAction<IFooterFormState>>
+    setter: Dispatch<SetStateAction<IFooterFormState>>,
 }): ReactElement => {
 
-    const [visible, setVisible] = useState<boolean>(false);
+    const [visible, setVisible] = useState<boolean>(true);
 
     useEffect(() => {
-        setVisible(true);
+        // setVisible(true);
 
         const timeout = setTimeout(() => hideModal(), 3000);
 
@@ -38,7 +38,10 @@ const MessageModal = ({
 
     if (position === "line") {
         return (
-            <div className={`${styles.line} ${visible ? styles.visible : styles.invisible}`} onClick={hideModal}>
+            <div 
+                className={`${visible ? styles.visible : styles.invisible} ${styles.line}`} 
+                onClick={hideModal}
+            >
                 <h3>{text}</h3>
             </div>
         )
