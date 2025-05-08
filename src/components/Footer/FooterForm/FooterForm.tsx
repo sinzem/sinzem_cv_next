@@ -1,13 +1,15 @@
 "use client";
 
 import {ReactElement, useState} from 'react';
-
-import styles from "./footerForm.module.css";
-import { IFooterFormDOM } from '@/types/language';
 import Link from 'next/link';
+
+import { IFooterFormDOM } from '@/types/language';
 import { IFooterFormState } from '@/types/footerForm';
 import MessageModal from '@/components/modals/MessageModal/MessageModal';
 import { checkEmail, sanitizeText } from '@/libs/checkers';
+
+import styles from "./footerForm.module.css";
+
 
 const FooterForm = ({
     footerForm
@@ -22,8 +24,10 @@ const FooterForm = ({
     const [sendState, setSendState] = useState<IFooterFormState>(null);
     const [loadState, setLoadState] = useState<boolean>(false);
 
+
     const sendMessasge = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+
         const trimName = nameInput.trim();
         setNameInput(trimName);
         if (!nameInput.trim().length || nameInput.trim().length < 2) {
@@ -31,11 +35,13 @@ const FooterForm = ({
             return;
         }
         const nameToSend = sanitizeText(nameInput.trim());
+
         const checkedEmail = checkEmail(emailInput);
         if (!checkedEmail) {
             setSendState("email");
             return;
         }
+
         const trimText = textInput.trim();
         setTextInput(trimText);
         if (!trimText.length || trimText.length < 2) {
@@ -43,6 +49,7 @@ const FooterForm = ({
             return;
         }
         const textToSend = sanitizeText(textInput.trim());
+
         if (!policyInput) {
             setSendState("policy");
             return;
@@ -54,8 +61,9 @@ const FooterForm = ({
             message: textToSend
         }
 
+        setLoadState(true);
+
         try {
-            setLoadState(true);
             const response = await fetch("/api/mail", {
                 method: "POST",
                 headers: {
@@ -65,18 +73,19 @@ const FooterForm = ({
             });
 
             const result = await response.json();
-
-            console.log(result);
-            setLoadState(false);
-            setSendState("success");
+            if (result.status === 200) {
+                setSendState("success");
+                setNameInput("");
+                setEmailInput("");
+                setTextInput("");
+                setPolicyInput(false);
+            } else {
+                setSendState("unknown");
+            }
         } catch {
-            setLoadState(false);
             setSendState("unknown");
         } finally {
-            setNameInput("");
-            setEmailInput("");
-            setTextInput("");
-            setPolicyInput(false);
+            setLoadState(false);
         }
     }   
 
@@ -151,14 +160,14 @@ const FooterForm = ({
                     />
                     <label htmlFor="checkbox">{footerForm.privacyLabel}
                         <Link href="/privacy">{footerForm.privacyLink}</Link>
+                        {sendState && sendState === "policy" && 
+                            <MessageModal 
+                                loading={loadState} 
+                                text={footerForm.sendPrivacyError} 
+                                setter={setSendState} 
+                            />
+                        }
                     </label>
-                    {sendState && sendState === "policy" && 
-                        <MessageModal 
-                            loading={loadState} 
-                            text={footerForm.sendPrivacyError} 
-                            setter={setSendState} 
-                        />
-                    }
                 </div>
             </div>
             {sendState && sendState === "success" && 

@@ -72,6 +72,7 @@
 }
 
 .policy {
+    position: relative;
     color: var(--color-text);
     display: flex;
     align-items: center;
@@ -92,6 +93,10 @@
 .policy label a:hover{
     transform: translateY(-2px);
     color: var(--hover-color);
+}
+
+.btn:disabled {
+    opacity: .6;
 }
 
 @media (max-width: 767px) { 
