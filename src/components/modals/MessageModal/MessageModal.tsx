@@ -1,21 +1,17 @@
 "use client";
 
 import { Dispatch, ReactElement, SetStateAction, useEffect, useState } from 'react';
-import Image from 'next/image';
 
 import { IFooterFormState } from '@/types/footerForm';
 
 import styles from "./messageModal.module.css";
-import LoaderGif from "../../../assets/icons/loader.gif";
 
 
 const MessageModal = ({
-    loading = false,
     text,
     position = "line",
     setter,
 }: {
-    loading?: boolean,
     text: string,
     position?: "line" | "fullscreen",
     setter: Dispatch<SetStateAction<IFooterFormState>>,
@@ -51,12 +47,7 @@ const MessageModal = ({
         <div className={`${visible ? styles.visible : styles.invisible} ${styles.fullscreen}`} >
             <div className={styles.wrapper} onClick={hideModal}>
                 <div className={styles.message}>
-                    {loading && 
-                        <Image src={LoaderGif} alt="Loading..." />
-                    }
-                    {!loading &&
-                        <h3>{text}</h3>
-                    }
+                    <h3>{text}</h3> 
                 </div>
             </div>
         </div>

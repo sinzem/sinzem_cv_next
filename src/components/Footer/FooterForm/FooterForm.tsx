@@ -9,6 +9,7 @@ import MessageModal from '@/components/modals/MessageModal/MessageModal';
 import { checkEmail, sanitizeText } from '@/libs/checkers';
 
 import styles from "./footerForm.module.css";
+import Loader from '@/components/modals/Loader/Loader';
 
 
 const FooterForm = ({
@@ -74,7 +75,7 @@ const FooterForm = ({
 
             const result = await response.json();
             console.log(result.status);
-            if (result.message === "Sending successful") {
+            if (result.message == "Sending successful") {
                 setSendState("success");
                 setNameInput("");
                 setEmailInput("");
@@ -121,7 +122,6 @@ const FooterForm = ({
                     />
                     {sendState && sendState === "email" && 
                         <MessageModal 
-                            loading={loadState} 
                             text={footerForm.sendEmailError} 
                             setter={setSendState} 
                         />
@@ -138,7 +138,6 @@ const FooterForm = ({
                 ></textarea>
                 {sendState && sendState === "textArea" && 
                     <MessageModal 
-                        loading={loadState} 
                         text={footerForm.sendTextError} 
                         setter={setSendState} 
                     />
@@ -163,7 +162,6 @@ const FooterForm = ({
                         <Link href="/privacy">{footerForm.privacyLink}</Link>
                         {sendState && sendState === "policy" && 
                             <MessageModal 
-                                loading={loadState} 
                                 text={footerForm.sendPrivacyError} 
                                 setter={setSendState} 
                             />
@@ -173,7 +171,6 @@ const FooterForm = ({
             </div>
             {sendState && sendState === "success" && 
                 <MessageModal 
-                    loading={loadState} 
                     text={footerForm.sendSuccess} 
                     position="fullscreen"
                     setter={setSendState} 
@@ -181,11 +178,13 @@ const FooterForm = ({
             }
             {sendState && sendState === "unknown" && 
                 <MessageModal 
-                    loading={loadState} 
                     text={footerForm.sendUnknownError} 
                     position="fullscreen"
                     setter={setSendState} 
                 />
+            }
+            {loadState &&
+                <Loader />
             }
         </form>
     );

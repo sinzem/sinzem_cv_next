@@ -1,0 +1,20 @@
+.wrapper {
+    width: fit-content;
+    height: fit-content;
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    background: bottom;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.img {
+    opacity: .3;
+}
+
+@media (max-width: 575px) {
+    .wrapper {
+        bottom: 35px;
+    }
+}

@@ -1,13 +1,14 @@
 import { ReactElement } from "react";
+import Link from "next/link";
 
-import styles from "./footer.module.css";
 import { IFooterDOM } from "@/types/language";
 import FooterForm from "./FooterForm/FooterForm";
 
+import styles from "./footer.module.css";
 import TelegramIcon from "../../assets/icons/social/tg";
 import FacebookIcon from "../../assets/icons/social/fb";
 import InstagramIcon from "../../assets/icons/social/ig";
-import Link from "next/link";
+
 
 const Footer = ({footer}: {footer: IFooterDOM}): ReactElement => {
     return (
