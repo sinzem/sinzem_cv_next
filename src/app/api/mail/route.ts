@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-export async function POST(request: Request) {
+export async function POST(request: Request): Promise<NextResponse<{message: string} | {error: string}>> {
 
     try {
         const {name, email, message} = await request.json();
@@ -44,7 +44,9 @@ export async function POST(request: Request) {
 // import { NextResponse } from "next/server";
 // import nodemailer from "nodemailer";
 
-// export async function POST(request: Request) {
+// export async function POST(
+//     request: Request
+// ): Promise<NextResponse<{message: string} | {error: string}>> {
 
 //     try {
 //         const {name, email, message} = await request.json();

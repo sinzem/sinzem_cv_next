@@ -2,18 +2,18 @@ import { ILanguageDOM } from "../../types/language";
 
 export const ru: ILanguageDOM = {
     head: {
-        canonical: "https://cv-next-six.vercel.app/",
+        canonical: "https://sinzem-cv-next.vercel.app/",
         title: "Резюме разработчика",
         description: "Резюме на позицию Front-end разработчика",
         keywords: "Resume, Curriculum vitae, Front-end developer, Kharkiv, JavaScript, React, резюме, front-end разработчик, Харьков",
         openGraph: {
             type: 'website',
-            url: 'https://cv-next-six.vercel.app/',
+            url: 'https://sinzem-cv-next.vercel.app/',
             title: 'Резюме',
             description: 'Резюме на должность front-end разработчика. JavaScript + React',
             images: [
                 {
-                    url: "./assets/img/main_block/for-seo.png",
+                    url: "../../assets/img/main_block/for-seo.png",
                     width: 150,
                     height: 120,
                     alt: 'My photo',
