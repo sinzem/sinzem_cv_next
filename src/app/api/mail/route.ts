@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-export async function POST(request: Request): Promise<NextResponse<{message: string} | {error: string}>> {
+export async function POST(
+    request: Request
+): Promise<NextResponse<{message: string} | {error: string}>> {
 
     try {
         const {name, email, message} = await request.json();
@@ -85,3 +87,4 @@ export async function POST(request: Request): Promise<NextResponse<{message: str
 //     }
 // } 
 
+// // 09048773546134`34125 <script>alert("Hello, World!!!")</script> <a href="https://google.com">Googa</a>

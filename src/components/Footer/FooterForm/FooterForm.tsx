@@ -73,7 +73,8 @@ const FooterForm = ({
             });
 
             const result = await response.json();
-            if (result.status === 200) {
+            console.log(result.status);
+            if (result.message === "Sending successful") {
                 setSendState("success");
                 setNameInput("");
                 setEmailInput("");
