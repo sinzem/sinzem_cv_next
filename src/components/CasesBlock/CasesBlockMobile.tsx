@@ -117,11 +117,16 @@ const CasesBlockMobile = (): ReactElement => {
                     <Link className={styles.link} target="_blank" href={mainCases[13].link}></Link>
                 </div>
             </div>
-            {/* <div className={styles.item}>
+            <div id={mainCases[14].id} className={`item ${styles.item} ${activeCase === mainCases[14].id ? styles.active : ""}`}>
                 <div className={styles.item_internal} style={{backgroundImage: `url(${mainCases[14].url})`}}>
                     <Link className={styles.link} target="_blank" href={mainCases[14].link}></Link>
                 </div>
-            </div> */}
+            </div>
+            <div id={mainCases[15].id} className={`item ${styles.item} ${activeCase === mainCases[15].id ? styles.active : ""}`}>
+                <div className={styles.item_internal} style={{backgroundImage: `url(${mainCases[15].url})`}}>
+                    <Link className={styles.link} target="_blank" href={mainCases[15].link}></Link>
+                </div>
+            </div>
             <div className={"item"}></div>
         </div>
     );

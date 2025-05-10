@@ -17,9 +17,9 @@
 }
 
 .clarification {
-    margin-top: 50px;
-    transform: translateX(50%);
-    text-align: end;
+    margin-top: 50px; 
+    transform: translateX(-50%); 
+    text-align: end; 
 }
 
 .clarification h3 {
@@ -39,9 +39,14 @@
 
 @media (max-width: 1199.4px) {
     .clarification {
+        width: calc(var(--index) * 20);
         transform: translateX(0%);
-        max-width: 300px;
         margin: 40px auto 0;
         padding: 10px;
+        text-align: left;
     }
+
+    .clarification h3 {
+        max-width: 280px;
+    } 
 }

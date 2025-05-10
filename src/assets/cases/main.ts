@@ -71,4 +71,14 @@ export const mainCases: ICase[] = [
         url: "/assets/img/cases_block/main-cases_img/grow_tree.jpg",
         link: "https://sinzem.github.io/cases/grow_tree_parallax_anim_title_HTML_CSS/index.html",
     },
+    {
+        id: "a0015",
+        url: "/assets/img/cases_block/main-cases_img/comments.png",
+        link: "https://test-task-messages-client.vercel.app/",
+    },
+    {
+        id: "a0016",
+        url: "/assets/img/cases_block/main-cases_img/basket.png",
+        link: "https://sinzem.github.io/basket.html",
+    },
 ]
