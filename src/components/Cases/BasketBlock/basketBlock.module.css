@@ -1,0 +1,17 @@
+.wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.btn_wrap {
+    position: absolute;
+    width: 280px;
+    left: 50%;
+    top: 0;
+}
+
+.btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}

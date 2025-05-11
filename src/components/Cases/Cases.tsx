@@ -1,7 +1,8 @@
 import { ReactElement } from "react";
 import styles from "./cases.module.css";
 import { IPortfolioDOM } from "@/types/language";
-import CasesBlock from "../CasesBlock/CasesBlock";
+import CasesBlock from "./CasesBlock/CasesBlock";
+// import BasketBlock from "./BasketBlock/BasketBlock";
 
 
 const Cases = ({cases} : {cases: IPortfolioDOM}): ReactElement => {
@@ -19,6 +20,8 @@ const Cases = ({cases} : {cases: IPortfolioDOM}): ReactElement => {
                 <h3>{cases.note1}</h3>
                 <h3>{cases.note2} <a href="https://github.com/sinzem" target="_blank"> {cases.note2Link}</a></h3>
             </div>
+
+            {/* <BasketBlock/> */}
           
             <div className={"divider_component"}></div>
         </section>    
