@@ -183,7 +183,7 @@ const FooterForm = ({
                     setter={setSendState} 
                 />
             }
-            {loadState &&
+            {loadState && 
                 <Loader />
             }
         </form>

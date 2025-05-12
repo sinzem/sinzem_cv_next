@@ -1,17 +1,21 @@
 .wrapper {
+    padding: 6px;
     width: fit-content;
     height: fit-content;
     position: fixed;
     bottom: 50px;
     left: 50px;
-    background: bottom;
+    background: var(--main-color);
     border-radius: 4px;
     overflow: hidden;
 }
 
 .img {
+    background: bottom;
+    border-radius: 4px;
     opacity: .3;
 }
+
 
 @media (max-width: 575px) {
     .wrapper {
