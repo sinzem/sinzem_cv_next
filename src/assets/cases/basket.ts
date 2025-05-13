@@ -1,6 +1,6 @@
 import { ICase } from "@/types/case";
 
-export const mainCases: ICase[] = [
+const basketCases: ICase[] = [
     {
         id: "b0001",
         url: "/assets/img/cases_block/basket-cases_img/site_list.png",
@@ -121,4 +121,11 @@ export const mainCases: ICase[] = [
         url: "/assets/img/cases_block/basket-cases_img/Parallax_menu.png",
         link: "https://sinzem.github.io/cases/basket/Parallax_menu/index.html",
     },
+    {
+        id: "b0025",
+        url: "/assets/img/cases_block/basket-cases_img/dot_animation.png",
+        link: "https://sinzem.github.io/cases/basket/Attraction_particles/index.html",
+    },
 ]
+
+export default basketCases;

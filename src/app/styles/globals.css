@@ -12,7 +12,7 @@
 }
 
 .dark {
-   --index: calc(1vw + 1vh);
+    --index: calc(1vw + 1vh);
     --transition: cubic-bezier(.1, .7, 0, 1); 
     --color-text: #fafafa;
     --hover-color: #ffa501;
