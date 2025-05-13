@@ -10,7 +10,7 @@ const BasketBlock = (): ReactElement => {
 
     const [showCases, setShowCases] = useState<boolean>(false);
 
-    const casesQuantity = Math.ceil((Math.ceil(basketCases.length / 3) + basketCases.length) / 2) + 1;
+    const casesQuantity = Math.ceil((Math.ceil(basketCases.length / 3) + basketCases.length) / 2) + 2;
 
     return (
         <div className={styles.wrapper}>
