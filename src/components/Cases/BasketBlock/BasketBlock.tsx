@@ -1,6 +1,6 @@
 "use client";
 
-import {ReactElement, useState} from 'react';
+import {ReactElement, useEffect, useRef, useState} from 'react';
 
 import styles from "./basketBlock.module.css";
 import basketCases from "../../../assets/cases/basket";
@@ -9,8 +9,34 @@ import BasketCase from '../BasketCase/BasketCase';
 const BasketBlock = (): ReactElement => {
 
     const [showCases, setShowCases] = useState<boolean>(false);
+    const [mouseOverSlider, setMouseOverSlider] = useState<boolean>(false);
+    const sliderRef = useRef<HTMLDivElement>(null);
 
-    const casesQuantity = Math.ceil((Math.ceil(basketCases.length / 3) + basketCases.length) / 2) + 2;
+    
+  
+    const handleWheel = (e: WheelEvent) => {
+
+        if (!sliderRef.current) return
+        e.preventDefault()
+        if (mouseOverSlider) sliderRef.current.scrollLeft += e.deltaY
+
+    }
+
+  useEffect(() => {
+    const casesQuantity = Math.ceil((Math.ceil(basketCases.length / 3) + basketCases.length) / 2) + 1;
+    const root = document.documentElement;
+    root.style.setProperty('--quantity', `${casesQuantity}`);
+
+    const slider = sliderRef.current
+    if (!slider) return
+
+    slider.addEventListener("wheel", handleWheel, { passive: false })
+
+    return () => {
+      slider.removeEventListener("wheel", handleWheel)
+    }
+  }, [])
+
 
     return (
         <div className={styles.wrapper}>
@@ -22,10 +48,16 @@ const BasketBlock = (): ReactElement => {
                     More
                 </button>
             </div>
-            <div className={`${styles.cases_wrap} ${showCases ? styles.show : styles.hide}`}>
-                <div className={`${styles.cases_block} ${showCases ? styles.show_block : styles.hide_block}`}
-                style={{gridTemplateColumns: `repeat(${casesQuantity}, 180px)`}}
+            <div 
+                className={`${styles.cases_wrap} ${showCases ? styles.show : styles.hide}`}
+                onMouseEnter={() => setMouseOverSlider(true)} 
+                onMouseLeave={() => setMouseOverSlider(false)}
             >
+                <div
+                    id="cases_block"
+                    ref={sliderRef}
+                    className={`${styles.cases_block} ${showCases ? styles.show_block : styles.hide_block}`}
+                >
                     {basketCases.map((item, i) => (
                         <div key={item.id} className={`${styles.item}  ${i % 3 === 0 ? styles.wide : styles.square}`}>
                             <BasketCase basketCase={item} />
