@@ -11,31 +11,39 @@ const BasketBlock = (): ReactElement => {
     const [showCases, setShowCases] = useState<boolean>(false);
     const [mouseOverSlider, setMouseOverSlider] = useState<boolean>(false);
     const sliderRef = useRef<HTMLDivElement>(null);
-
-    
+  
   
     const handleWheel = (e: WheelEvent) => {
-
-        if (!sliderRef.current) return
-        e.preventDefault()
-        if (mouseOverSlider) sliderRef.current.scrollLeft += e.deltaY
-
+        if (!sliderRef.current) return;
+        e.preventDefault();
+        sliderRef.current.scrollLeft += e.deltaY;
     }
 
-  useEffect(() => {
-    const casesQuantity = Math.ceil((Math.ceil(basketCases.length / 3) + basketCases.length) / 2) + 1;
-    const root = document.documentElement;
-    root.style.setProperty('--quantity', `${casesQuantity}`);
+    useEffect(() => {
+        const casesQuantity = Math.ceil((Math.ceil(basketCases.length / 3) + basketCases.length) / 2) + 1;
+        const root = document.documentElement;
+        root.style.setProperty('--quantity', `${casesQuantity}`);
 
-    const slider = sliderRef.current
-    if (!slider) return
+        const slider = sliderRef.current;
+        if (!slider) return;
 
-    slider.addEventListener("wheel", handleWheel, { passive: false })
+        slider.addEventListener("wheel", handleWheel);
 
-    return () => {
-      slider.removeEventListener("wheel", handleWheel)
+        return () => slider.removeEventListener("wheel", handleWheel);   
+    }, [])
+
+    const blockDisplay = () => {
+        const slider = sliderRef.current;
+        if (!slider) return;
+        if (!showCases) {
+            slider.style.scrollBehavior = "";
+            setShowCases(true);
+        } else {
+            slider.style.scrollBehavior = "smooth";
+            slider.scrollLeft = 0; 
+            setShowCases(false);
+        }
     }
-  }, [])
 
 
     return (
@@ -43,19 +51,19 @@ const BasketBlock = (): ReactElement => {
             <div className={styles.btn_wrap}>
                 <button 
                     className={`btn ${styles.btn}`}
-                    onClick={() => setShowCases(!showCases)}
+                    onClick={blockDisplay}
                 >
                     More
                 </button>
             </div>
             <div 
                 className={`${styles.cases_wrap} ${showCases ? styles.show : styles.hide}`}
-                onMouseEnter={() => setMouseOverSlider(true)} 
+                onMouseEnter={() => setMouseOverSlider(!mouseOverSlider)} 
                 onMouseLeave={() => setMouseOverSlider(false)}
+                ref={sliderRef}
             >
                 <div
                     id="cases_block"
-                    ref={sliderRef}
                     className={`${styles.cases_block} ${showCases ? styles.show_block : styles.hide_block}`}
                 >
                     {basketCases.map((item, i) => (
