@@ -126,6 +126,11 @@ const basketCases: ICase[] = [
         url: "/assets/img/cases_block/basket-cases_img/dot_animation.png",
         link: "https://sinzem.github.io/cases/basket/Attraction_particles/index.html",
     },
+    {
+        id: "b0026",
+        url: "/assets/img/cases_block/basket-cases_img/accordion_animations.png",
+        link: "https://sinzem.github.io/cases/basket/accordion_animation/index.html",
+    },
 ]
 
 export default basketCases;

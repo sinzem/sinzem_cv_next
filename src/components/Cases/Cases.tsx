@@ -8,7 +8,7 @@ import CasesBlock from "./CasesBlock/CasesBlock";
 const Cases = ({cases} : {cases: IPortfolioDOM}): ReactElement => {
 
     return (
-        <section className={styles.cases_wrap}>
+        <section id="cases" className={styles.cases_wrap}>
             <div className={styles.cases}>
                 <h3 className={`subtitle subtitle_main ${styles.subtitle}`}>{cases.title}</h3>
                 <h2 className={`title ${styles.subtitle}`}>{cases.subtitle}</h2>
