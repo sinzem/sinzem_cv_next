@@ -130,4 +130,5 @@ export interface IFooterFormDOM {
     sendEmailError: string;
     sendTextError: string;
     sendPrivacyError: string;
+    resetForm: string;
 }

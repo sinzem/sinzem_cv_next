@@ -1,5 +1,5 @@
 .form {
-    max-width: 540px;
+    max-width: 560px;
     margin: 25px auto 0;
 }
 
@@ -24,7 +24,7 @@
 .input input {
     display: block;
     color: var(--color-text);
-    width: 260px;
+    width: 270px;
     height: 30px;
     padding: 0 15px;
     border: 1px solid var(--color-text);
@@ -65,7 +65,7 @@
 .triggers {
     position: relative;
     width: 100%;
-    margin: 25px auto;
+    margin: 0px auto 25px;
     display: grid;
     grid-template: 1fr / auto auto;
     justify-content: space-between;
@@ -79,8 +79,11 @@
 }
 
 .policy input {
-    margin: 0 10px;
     cursor: pointer;
+}
+
+.policy label {
+    margin-right: 10px;
 }
 
 .policy label a {
@@ -97,6 +100,15 @@
 
 .btn:disabled {
     opacity: .6;
+}
+
+.reset {
+    margin: 12px 0 5px;
+    color: var(--main-color);
+}
+
+.reset:hover {
+    color: var(--warning-color);
 }
 
 @media (max-width: 767px) { 
@@ -120,7 +132,16 @@
         grid-row: 2 / 3;
     }
 
+    .policy label {
+        margin-right: 0;
+        margin-left: 10px;
+    }
+
     .policy input {
         margin-bottom: 2px;
+    }
+
+    .reset {
+        margin: 12px 0 12px;
     }
 }

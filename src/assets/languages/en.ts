@@ -106,6 +106,7 @@ export const en: ILanguageDOM = {
             sendEmailError: "Enter valid email",
             sendTextError: "Enter your message",
             sendPrivacyError: "Your consent to data processing is required",
+            resetForm: "Reset form",
         }
     },
 }

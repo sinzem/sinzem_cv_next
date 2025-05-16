@@ -1,6 +1,6 @@
 "use client";
 
-import {ReactElement, useState} from 'react';
+import {MouseEvent, ReactElement, useState} from 'react';
 import Link from 'next/link';
 
 import { IFooterFormDOM } from '@/types/language';
@@ -91,6 +91,14 @@ const FooterForm = ({
         }
     }   
 
+    const resetForm = (e: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => {
+        e.preventDefault();
+        setNameInput("");
+        setEmailInput("");
+        setTextInput("");
+        setPolicyInput(false);
+    }
+
 
     return (
         <form id="my-letter" className={styles.form} onSubmit={(e) => sendMessasge(e)} >
@@ -143,21 +151,11 @@ const FooterForm = ({
                     />
                 }
             </div>
+            <button className={styles.reset} onClick={(e) => resetForm(e)}>
+                {footerForm.resetForm}
+            </button>
             <div className={styles.triggers}>
-                <button
-                    className={`btn ${styles.btn}`}
-                    disabled={!sendState && !loadState ? false : true}
-                >
-                    {footerForm.buttonText}
-                </button>
                 <div className={styles.policy}>
-                    <input 
-                        type="checkbox" 
-                        name="checkbox" 
-                        id="checkbox" 
-                        checked={policyInput} 
-                        onChange={() => setPolicyInput(!policyInput)}
-                    />
                     <label htmlFor="checkbox">{footerForm.privacyLabel}
                         <Link href="/privacy">{footerForm.privacyLink}</Link>
                         {sendState && sendState === "policy" && 
@@ -167,7 +165,20 @@ const FooterForm = ({
                             />
                         }
                     </label>
+                    <input 
+                        type="checkbox" 
+                        name="checkbox" 
+                        id="checkbox" 
+                        checked={policyInput} 
+                        onChange={() => setPolicyInput(!policyInput)}
+                    />
                 </div>
+                <button
+                    className={`btn ${styles.btn}`}
+                    disabled={!sendState && !loadState ? false : true}
+                >
+                    {footerForm.buttonText}
+                </button>
             </div>
             {sendState && sendState === "success" && 
                 <MessageModal 

@@ -106,6 +106,7 @@ export const ru: ILanguageDOM = {
             sendEmailError: "Введите ввалидный email",
             sendTextError: "Введите ваше сообщение",
             sendPrivacyError: "Нужно согласие на обработку данных",
+            resetForm: "Очистить форму",
         }
     },
 }

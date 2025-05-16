@@ -5,6 +5,7 @@
   --hover-color:  rgb(237, 136, 5);
   --main-color: #ffa501;
   --menu-color: #9c9c9c;
+  --warning-color: red;
   --background: url("../../assets/img/main_block/bg-gen-min.jpg");
   --header-back: url("../../assets/img/main_block/bg-top-1627169017_30-kartinkin-com-p-fon-neitralnii-delovoi-krasivo-30.jpg");
   --quantity: 1;
@@ -19,6 +20,7 @@
     --hover-color: #ffa501;
     --main-color: rgb(237, 136, 5);
     --menu-color: #cd8506;
+    --warning-color: red;
     --background: url("../../assets/img/main_block/main_bg.jpg");
     --header-back: linear-gradient(355deg, rgba(31,30,28,1) 0%, rgba(52,39,30,0.5) 58%, rgba(255,162,0,1) 100%);
     

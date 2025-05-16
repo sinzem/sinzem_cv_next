@@ -106,6 +106,7 @@ export const ua: ILanguageDOM = {
             sendEmailError: "Введіть валідний email",
             sendTextError: "Введіть ваше повідомлення",
             sendPrivacyError: "Потрібна згода на обробку даних",
+            resetForm: "Очистити форму",
         }
     },
 }
