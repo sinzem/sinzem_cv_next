@@ -43,6 +43,7 @@ a:focus,a:active{outline: none;}
 nav,footer,header,aside{display: block;}
 
 html,body{
+  min-width: 320px;
   height: 100%;
   width: 100%;
   font-size: 100%;

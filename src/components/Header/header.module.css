@@ -1,6 +1,7 @@
 .header {
     position: relative;
     width: 100%;
+    min-height: 676px;
     height: 100vh;
     background: var(--header-back);
     background-size: cover;
@@ -54,7 +55,7 @@
 .freelancehunt {
     position: absolute;
     left: 4vw;
-    top: 95vh;
+    top: 95%;
     background: bottom;
 }
 
