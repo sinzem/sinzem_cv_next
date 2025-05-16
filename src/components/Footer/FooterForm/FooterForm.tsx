@@ -3,13 +3,13 @@
 import {MouseEvent, ReactElement, useState} from 'react';
 import Link from 'next/link';
 
+import { checkEmail, sanitizeText } from '@/libs/checkers';
 import { IFooterFormDOM } from '@/types/language';
 import { IFooterFormState } from '@/types/footerForm';
 import MessageModal from '@/components/modals/MessageModal/MessageModal';
-import { checkEmail, sanitizeText } from '@/libs/checkers';
+import Loader from '@/components/modals/Loader/Loader';
 
 import styles from "./footerForm.module.css";
-import Loader from '@/components/modals/Loader/Loader';
 
 
 const FooterForm = ({
@@ -102,7 +102,9 @@ const FooterForm = ({
 
     return (
         <form id="my-letter" className={styles.form} onSubmit={(e) => sendMessasge(e)} >
+
             <div className={styles.input_wrap}>
+
                 <div className={styles.input}>
                     <label htmlFor="name">{footerForm.nameLabel}</label>
                     <input 
@@ -119,6 +121,7 @@ const FooterForm = ({
                         />
                     }
                 </div>
+
                 <div className={styles.input}>
                     <label htmlFor="email">{footerForm.emailLabel}</label>
                     <input 
@@ -136,6 +139,7 @@ const FooterForm = ({
                     }
                 </div>
             </div>
+
             <div className={styles.textarea}>
                 <label htmlFor="text">{footerForm.messageLabel}</label>
                 <textarea 
@@ -151,11 +155,14 @@ const FooterForm = ({
                     />
                 }
             </div>
+
             <button className={styles.reset} onClick={(e) => resetForm(e)}>
                 {footerForm.resetForm}
             </button>
+
             <div className={styles.triggers}>
                 <div className={styles.policy}>
+
                     <label htmlFor="checkbox">{footerForm.privacyLabel}
                         <Link href="/privacy">{footerForm.privacyLink}</Link>
                         {sendState && sendState === "policy" && 
@@ -165,6 +172,7 @@ const FooterForm = ({
                             />
                         }
                     </label>
+
                     <input 
                         type="checkbox" 
                         name="checkbox" 
@@ -173,6 +181,7 @@ const FooterForm = ({
                         onChange={() => setPolicyInput(!policyInput)}
                     />
                 </div>
+
                 <button
                     className={`btn ${styles.btn}`}
                     disabled={!sendState && !loadState ? false : true}
@@ -180,6 +189,7 @@ const FooterForm = ({
                     {footerForm.buttonText}
                 </button>
             </div>
+
             {sendState && sendState === "success" && 
                 <MessageModal 
                     text={footerForm.sendSuccess} 
@@ -187,6 +197,7 @@ const FooterForm = ({
                     setter={setSendState} 
                 />
             }
+
             {sendState && sendState === "unknown" && 
                 <MessageModal 
                     text={footerForm.sendUnknownError} 
@@ -194,6 +205,7 @@ const FooterForm = ({
                     setter={setSendState} 
                 />
             }
+            
             {loadState && 
                 <Loader />
             }

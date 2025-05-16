@@ -12,6 +12,7 @@ const General = ({
     general: IGeneralDOM,
     activity: ISlides
 }): ReactElement => {
+
     return (
         <div className={`
             ${styles.slide} 
@@ -22,7 +23,9 @@ const General = ({
             }    
         `}>
             <h3 className={`title ${styles.slider_title}`}>{general.title}</h3>
+
             <div className={`${styles.content} ${styles.content_general}`}>
+
                 <div className={`${styles.content_block} ${styles.content_block_top} ${styles.content_block_top_general}`}>
                     <ul className={`${styles.list} ${styles.list_general_top}`}>
                         <li>{general.skillTop1}</li>
@@ -35,6 +38,7 @@ const General = ({
                         <li>{general.skillTop5}</li>
                     </ul>
                 </div>
+
                 <div className={`${styles.content_block} ${styles.content_block_bottom} ${styles.content_block_bottom_general}`}>
                     <ul className={`${styles.list} ${styles.list_general_bottom}`}>
                         <li>{general.skillBottom1}</li>
@@ -42,7 +46,9 @@ const General = ({
                         <li>{general.skillBottom3}</li>
                     </ul>
                 </div>
+
             </div>
+            
         </div>
     );
 };

@@ -6,7 +6,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 import styles from "./settings.module.css";
-
 import SettingsIcon from "../../assets/icons/head/settings.png";
 import ThemesIcon from "../../assets/icons/head/brightness.png";
 
@@ -46,6 +45,7 @@ const Settings = (): ReactElement => {
             onMouseOut={() => setNavigationActive(false)}
         >
             <div className={styles.settings}>
+
                 <Image 
                     className={styles.settings_icon} 
                     src={SettingsIcon} 
@@ -53,6 +53,7 @@ const Settings = (): ReactElement => {
                     height={32}
                     alt="settings" 
                 />
+    
                 <div 
                     className={`
                         ${styles.item} 
@@ -69,6 +70,7 @@ const Settings = (): ReactElement => {
                         alt="theme" 
                     />
                 </div>
+
                 <div className={`
                     ${styles.item} 
                     ${styles.lang} 
@@ -76,6 +78,7 @@ const Settings = (): ReactElement => {
                         ? styles.item_active 
                         : styles.item_inactive}
                 `}>
+                    
                     <div className={styles.lang_change}
                         onMouseOver={() => setLangActive(true)} 
                         onMouseOut={() => setLangActive(false)}

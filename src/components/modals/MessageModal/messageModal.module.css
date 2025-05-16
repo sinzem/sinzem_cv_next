@@ -27,6 +27,7 @@
     left: 20px;
     top: 80%;
     padding: 10px 24px;
+    opacity: 0;
 }
 
 .line h3 {
@@ -45,11 +46,11 @@
 }
 
 .visible {
-    animation: body-opacity .5s ease forwards; 
+    animation: body-opacity .5s ease forwards;  
 }
 
 .invisible {
-    animation: body-not-opacity .5s ease forwards; 
+    animation: body-not-opacity .5s ease forwards;  
 }
 
 @keyframes body-opacity {0% {opacity: 0;} 100% {opacity: 1;}}

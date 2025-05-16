@@ -13,6 +13,7 @@ const Hard = ({
     hard: IHardDOM,
     activity: ISlides,
 }): ReactElement => {
+
     return (
         <div className={`
             ${styles.slide} 
@@ -22,9 +23,13 @@ const Hard = ({
                 : styles.hard_inactive
             }
         `}>
+
             <h3 className={`title ${styles.title}`}>{hard.title}</h3>
+
             <div className={`${styles.content} ${styles.content_hard}`}>
+
                 <div className={`${styles.content_block} ${styles.content_block_top}`}>
+
                 <div className={`${styles.content_block_top_wrapper} ${styles.description_wrapper}`}>
                         <h3 className={`${styles.description} ${styles.description_hard} ${styles.description_hard_middle}`}>
                             {hard.descriptionTop}
@@ -40,6 +45,7 @@ const Hard = ({
                         <li>{hard.skillTop4}</li>
                     </ul>
                 </div>
+
                 <div className={`${styles.content_block} ${styles.content_block_bottom}`}>
                     <div className={`${styles.content_block_bottom_wrapper} ${styles.description_wrapper}`}>
                         <h3 className={`${styles.description} ${styles.description_hard} ${styles.description_hard_junior}`}>
@@ -49,6 +55,7 @@ const Hard = ({
                             {hard.descriptionBottomMobile}
                         </h3>
                     </div>
+                    
                     <div className={styles.list_hard_junior}>
                         <ul className={`${styles.list} ${styles.list_hard_junior_top}`}>
                             <li>{hard.skillBottom1}</li>
@@ -62,7 +69,9 @@ const Hard = ({
                         </ul>
                     </div>
                 </div>
+
             </div>
+
         </div>
     );
 };
