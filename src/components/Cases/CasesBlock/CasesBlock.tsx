@@ -1,6 +1,7 @@
 "use client";
 
 import { ReactElement, useEffect, useState } from 'react';
+
 import CasesBlockDesktop from './CasesBlockDesktop';
 import CasesBlockMobile from './CasesBlockMobile';
 
@@ -23,10 +24,7 @@ const CasesBlock = (): ReactElement => {
       
         return () => window.removeEventListener("resize", updateDeviceType);
     }, [])
-
-    useEffect(() => {
-        console.log(deviceType);
-    }, [deviceType])
+    
 
     return (
         <>

@@ -1,14 +1,18 @@
 import { ReactElement } from "react";
-import styles from "./cases.module.css";
+
 import { IPortfolioDOM } from "@/types/language";
 import CasesBlock from "./CasesBlock/CasesBlock";
- import BasketBlock from "./BasketBlock/BasketBlock";
+import BasketBlock from "./BasketBlock/BasketBlock";
+
+import styles from "./cases.module.css";
 
 
 const Cases = ({cases} : {cases: IPortfolioDOM}): ReactElement => {
 
     return (
+
         <section id="cases" className={styles.cases_wrap}>
+            
             <div className={styles.cases}>
                 <h3 className={`subtitle subtitle_main ${styles.subtitle}`}>{cases.title}</h3>
                 <h2 className={`title ${styles.subtitle}`}>{cases.subtitle}</h2>
