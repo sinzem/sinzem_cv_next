@@ -1,0 +1,42 @@
+.wrap {
+    position: relative;
+    width: 100%;
+    min-height: 100.06vh;
+}
+
+.title {
+    position: absolute;
+    top: 40vh;
+    left: 15vw;
+    max-width: 400px;
+    line-height: 1.2;
+    text-align: start;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 5vw;
+    right: 5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 110px;
+}
+
+.btn {
+    height: 34px;
+    text-align: center;
+    line-height: 1.4;
+} 
+
+@media (max-width: 575px) {
+    .title {
+        max-width: 260px;
+        font-size: 24px;
+    }
+
+    .buttons {
+        bottom: 8vw;
+        right: 8vw;
+    }
+}

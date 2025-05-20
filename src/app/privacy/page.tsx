@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { JSX } from "react";
 
 import styles from "./privacy.module.css";
+import BackButton from "@/components/buttons/BackButton/BackButton";
 
 export const metadata: Metadata = {
     title: "Privacy policy",
@@ -11,6 +12,9 @@ export default async function Privacy(): Promise<JSX.Element> {
 
     return (
         <div className={styles.privacy}>
+            <div className={styles.back}>
+                <BackButton />
+            </div>
             <h3>Вступ</h3>
             <p>Конфіденційність користувачів цього веб-сайту має велике значення для мене, і я прикладу всіх зусиль для забезпечення її захисту. Дані правила пояснюють, як я використовую вашу персональну інформацію.</p>
             <h3>Права інтелектуальної власності</h3>

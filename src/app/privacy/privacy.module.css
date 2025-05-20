@@ -1,9 +1,16 @@
 .privacy {
     padding: 140px 30px 80px 30px;
+    position: relative;
 }
 
 .privacy h3 {
     font-size: 18px;
     font-weight: bold;
     line-height: 1.5;
+}
+
+.back {
+    position: fixed;
+    top: 20px;
+    right: 20px;
 }

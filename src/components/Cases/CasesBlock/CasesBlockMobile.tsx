@@ -13,11 +13,6 @@ const CasesBlockMobile = (): ReactElement => {
 
     useEffect(() => {
         setCasesList(document.querySelectorAll(".item"));
-        // getCases();
-
-        // window.addEventListener("resize", getCases);
-
-        // return () => window.removeEventListener("resize", getCases);
     }, [])
 
     useEffect(() => {
@@ -37,11 +32,6 @@ const CasesBlockMobile = (): ReactElement => {
         return () => observer.disconnect();
     }, [casesList]);
  
- 
-    // const getCases = () => {
-    //     setCasesList(document.querySelectorAll(".item"));
-    // }
-
 
     return (
 

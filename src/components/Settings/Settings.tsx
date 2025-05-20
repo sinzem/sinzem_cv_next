@@ -10,7 +10,7 @@ import SettingsIcon from "../../assets/icons/head/settings.png";
 import ThemesIcon from "../../assets/icons/head/brightness.png";
 
 
-const Settings = (): ReactElement => {
+const Settings = (): ReactElement | null => {
 
     const [navigationActive, setNavigationActive] = useState<boolean>(false);
     const [langActive, setLangActive] = useState<boolean>(false);
@@ -34,8 +34,11 @@ const Settings = (): ReactElement => {
         hideMenu();
     }
 
+    if (!(pathname === "/" || pathname === "/ua" || pathname === "/ru")) {
+        return null;
+    }
 
-    return (
+    return ( 
         <div 
             className={`
                 ${styles.navigation} 
