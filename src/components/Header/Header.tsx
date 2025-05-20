@@ -10,7 +10,7 @@ const Header = ({header}: {header: IHeaderDOM}): ReactElement => {
 
     return (
         <section id="header" className={styles.header}>
-            <Image className={styles.main_photo} src={mainPhoto} alt="my-photo" />
+            <Image className={styles.main_photo} src={mainPhoto} priority={true} alt="my-photo" />
             <div className={styles.wrapper}>
                 <h1 className={`subtitle ${styles.subtitle}`}>{header.title}</h1>
                 <h2 className={`title ${styles.title}`}>{header.subtitle}</h2>

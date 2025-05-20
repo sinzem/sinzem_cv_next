@@ -111,6 +111,7 @@ const FooterForm = ({
                         type="text" 
                         name="name" 
                         id="name" 
+                        autoComplete="off"
                         value={nameInput} 
                         onChange={(e) => setNameInput(e.target.value)}  
                     />
@@ -128,6 +129,7 @@ const FooterForm = ({
                         type="text" 
                         name="email" 
                         id="email" 
+                        autoComplete="off"
                         value={emailInput} 
                         onChange={(e) => setEmailInput(e.target.value)} 
                     />
