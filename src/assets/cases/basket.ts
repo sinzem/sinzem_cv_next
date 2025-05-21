@@ -131,6 +131,11 @@ const basketCases: ICase[] = [
         url: "/assets/img/cases_block/basket-cases_img/accordion_animations.png",
         link: "https://sinzem.github.io/cases/basket/accordion_animation/index.html",
     },
+    {
+        id: "b0027",
+        url: "/assets/img/cases_block/basket-cases_img/image_rotation.png",
+        link: "https://sinzem.github.io/cases/basket/image_rotation/index.html",
+    },
 ]
 
 export default basketCases;
