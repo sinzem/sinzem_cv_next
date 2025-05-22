@@ -13,7 +13,7 @@ export const en: ILanguageDOM = {
             description: 'Resume for front-end developer position. JavaScript + React',
             images: [
                 {
-                    url: "./assets/img/main_block/for-seo.png",
+                    url: "../assets/img/main_block/for-seo.png",
                     width: 150,
                     height: 120,
                     alt: 'My photo',
