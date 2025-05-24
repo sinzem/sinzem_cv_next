@@ -16,14 +16,14 @@ const metadataGenerate = (langId: IPossibleLanguage): Metadata => {
         description: head.description,
         openGraph: {
             type: "website",
-            url: "../assets/img/main_block/for-seo.png",
+            url: head.openGraph.url,
             title: head.openGraph.title,
             description: head.openGraph.description,
             images: [
                 {
-                    url: head.openGraph.url,
-                    width: head.openGraph.images[0].width,
-                    height: head.openGraph.images[0].height,
+                    url: "../assets/img/main_block/for-seo.png",
+                    // width: head.openGraph.images[0].width,
+                    // height: head.openGraph.images[0].height,
                     alt: head.openGraph.url,
                 },
             ],
