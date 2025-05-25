@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import languages from "../assets/languages/languages";
 import { IPossibleLanguage } from "@/types/language";
 
-// import photoForOG from "../assets/img/main_block/for-seo.png";
 
 const metadataGenerate = (langId: IPossibleLanguage): Metadata => {
 
@@ -24,6 +23,8 @@ const metadataGenerate = (langId: IPossibleLanguage): Metadata => {
                     url: "../assets/img/main_block/for-seo.png",
                     // width: head.openGraph.images[0].width,
                     // height: head.openGraph.images[0].height,
+                    height: "150px",
+                    width: "200px",
                     alt: head.openGraph.url,
                 },
             ],
