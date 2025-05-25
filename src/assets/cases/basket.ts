@@ -136,6 +136,11 @@ const basketCases: ICase[] = [
         url: "/assets/img/cases_block/basket-cases_img/image_rotation.png",
         link: "https://sinzem.github.io/cases/basket/image_rotation/index.html",
     },
+    {
+        id: "b0028",
+        url: "/assets/img/cases_block/basket-cases_img/test_parallax_slider.png",
+        link: "https://sinzem.github.io/cases/basket/test_parallax_slider/index.html",
+    },
 ]
 
 export default basketCases;
