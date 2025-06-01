@@ -76,16 +76,16 @@ const basketCases: ICase[] = [
         url: "/assets/img/cases_block/basket-cases_img/delivery.png",
         link: "https://sinzem.github.io/cases/basket/delivery/index.html#our_advantages",
     },
-    {
-        id: "b0016",
-        url: "/assets/img/cases_block/basket-cases_img/building.jpg",
-        link: "https://sinzem.github.io/cases/basket/building/index.html",
-    },
-    {
-        id: "b0017",
-        url: "/assets/img/cases_block/basket-cases_img/banner.jpg",
-        link: "https://sinzem.github.io/cases/basket/dental_clinic/index.html",
-    },
+    // {
+    //     id: "b0016",
+    //     url: "/assets/img/cases_block/basket-cases_img/building.jpg",
+    //     link: "https://sinzem.github.io/cases/basket/building/index.html",
+    // },
+    // {
+    //     id: "b0017",
+    //     url: "/assets/img/cases_block/basket-cases_img/banner.jpg",
+    //     link: "https://sinzem.github.io/cases/basket/dental_clinic/index.html",
+    // },
     {
         id: "b0018",
         url: "/assets/img/cases_block/basket-cases_img/advantage_top_left.jpg",
