@@ -81,11 +81,11 @@ const basketCases: ICase[] = [
         url: "/assets/img/cases_block/basket-cases_img/building.jpg",
         link: "https://sinzem.github.io/cases/basket/building/index.html",
     },
-    // {
-    //     id: "b0017",
-    //     url: "/assets/img/cases_block/basket-cases_img/banner.jpg",
-    //     link: "https://sinzem.github.io/cases/basket/dental_clinic/index.html",
-    // },
+    {
+        id: "b0017",
+        url: "/assets/img/cases_block/basket-cases_img/banner.jpg",
+        link: "https://sinzem.github.io/cases/basket/dental_clinic/index.html",
+    },
     {
         id: "b0018",
         url: "/assets/img/cases_block/basket-cases_img/advantage_top_left.jpg",
@@ -141,6 +141,11 @@ const basketCases: ICase[] = [
         url: "/assets/img/cases_block/basket-cases_img/test_parallax_slider.png",
         link: "https://sinzem.github.io/cases/basket/test_parallax_slider/index.html",
     },
-]
+    {
+        id: "b0029",
+        url: "/assets/img/cases_block/basket-cases_img/css_glitch_cube_cards.png",
+        link: "https://sinzem.github.io/cases/basket/css_glitch_cube_cards/index.html",
+    },
+] 
 
 export default basketCases;
