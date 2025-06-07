@@ -23,13 +23,13 @@ const Footer = ({footer}: {footer: IFooterDOM}): ReactElement => {
                 <div className={`subtitle ${styles.text}`}>{footer.linksTitle}</div>
 
                 <div className={styles.social}>
-                    <Link href="https://t.me/sinzem83" className={styles.link} >
+                    <Link href="https://t.me/sinzem83" target="_blank" className={styles.link} >
                         <TelegramIcon />
                     </Link>
-                    <Link href="https://www.facebook.com/sinzem/" className={styles.link} >
+                    <Link href="https://www.facebook.com/sinzem/" target="_blank" className={styles.link} >
                         <FacebookIcon />
                     </Link>
-                    <Link href="https://www.instagram.com/sinzem83/" className={styles.link} >
+                    <Link href="https://www.instagram.com/sinzem83/" target="_blank" className={styles.link} >
                         <InstagramIcon />
                     </Link>
                 </div>
