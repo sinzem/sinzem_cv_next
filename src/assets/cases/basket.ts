@@ -56,11 +56,11 @@ const basketCases: ICase[] = [
         url: "assets/img/cases_block/basket-cases_img/fan.png",
         link: "https://sinzem.github.io/cases/basket/fan/index.html",
     },
-    {
-        id: "b0012",
-        url: "/assets/img/cases_block/basket-cases_img/wordpress.png",
-        link: "https://sinzem.github.io/cases/basket/wordpress/index.html",
-    },
+    // {
+    //     id: "b0012",
+    //     url: "/assets/img/cases_block/basket-cases_img/wordpress.png",
+    //     link: "https://sinzem.github.io/cases/basket/wordpress/index.html",
+    // },
     {
         id: "b0013",
         url: "/assets/img/cases_block/basket-cases_img/halloween.jpg",
