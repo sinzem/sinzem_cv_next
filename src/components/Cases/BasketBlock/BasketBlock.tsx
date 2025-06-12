@@ -20,7 +20,6 @@ const BasketBlock = (): ReactElement => {
     }
 
     useEffect(() => {
-        getProperties();
         const casesQuantity = Math.ceil((Math.ceil(basketCases.length / 3) + basketCases.length) / 2) + 1;
         const root = document.documentElement;
         root.style.setProperty('--quantity', `${casesQuantity}`);
@@ -33,30 +32,14 @@ const BasketBlock = (): ReactElement => {
         return () => slider.removeEventListener("wheel", handleWheel);   
     }, [])
 
-    const getProperties = () => {
-        const itemsBlock = document.querySelector('#cases_block');
-        let itemsBlockGap;
-        if (itemsBlock) {
-            itemsBlockGap = parseInt(getComputedStyle(itemsBlock).gap);
-        }
-        
-        const item = document.querySelector(`.${styles.square}`);
-        let workAreaWidth;
-        if (item && itemsBlockGap) {
-            workAreaWidth = item?.scrollWidth * 3 + itemsBlockGap * 2;
-        }
-         
-        console.log(workAreaWidth);
-    }
-
     const blockDisplay = () => {
         const slider = sliderRef.current;
         if (!slider) return;
         if (!showCases) {
-            // slider.style.scrollBehavior = "";
+            slider.style.scrollBehavior = "";
             setShowCases(true);
         } else {
-            // slider.style.scrollBehavior = "smooth";
+            slider.style.scrollBehavior = "smooth";
             slider.scrollLeft = 0; 
             setShowCases(false);
         }
