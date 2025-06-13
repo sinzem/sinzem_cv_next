@@ -10,6 +10,7 @@ const BasketBlock = (): ReactElement => {
 
     const [showCases, setShowCases] = useState<boolean>(false);
     const [mouseOverSlider, setMouseOverSlider] = useState<boolean>(false);
+    // const [dataForBasketAnimation, setDataForBasketAnimation] = useState(); 
     const sliderRef = useRef<HTMLDivElement>(null);
   
   
@@ -20,6 +21,10 @@ const BasketBlock = (): ReactElement => {
     }
 
     useEffect(() => {
+        const workAreaBackgroundAimation = getDataForBasketAimation();
+        // setDataForBasketAnimation(workAreaBackgroundAimation);
+        console.log(workAreaBackgroundAimation);
+
         const casesQuantity = Math.ceil((Math.ceil(basketCases.length / 3) + basketCases.length) / 2) + 1;
         const root = document.documentElement;
         root.style.setProperty('--quantity', `${casesQuantity}`);
@@ -44,6 +49,41 @@ const BasketBlock = (): ReactElement => {
             setShowCases(false);
         }
     }
+
+    const getDataForBasketAimation = () => {
+        const itemsBlock = document.querySelector('#cases_block');
+        const itemsBlockGap = itemsBlock ? parseInt(getComputedStyle(itemsBlock).gap) : 0;
+
+        const item = document.querySelector(`.${styles.square}`);
+        const itemFullWidth = item && itemsBlockGap ? item.scrollWidth * 3 + itemsBlockGap * 2 : 0;
+
+        const itemsWrapperWidth = sliderRef.current ? sliderRef.current.clientWidth : 0;
+        const leftAnimationDot = itemsWrapperWidth && itemFullWidth ? Math.round(itemsWrapperWidth / 2 - itemFullWidth / 2) : 0; 
+        const rightAnimationDot = itemsWrapperWidth && itemFullWidth ? Math.round(itemsWrapperWidth / 2 + itemFullWidth / 2) : 0; 
+    
+        return {
+            itemsBlockGap,
+            itemFullWidth,
+            itemsWrapperWidth,
+            leftAnimationDot,
+            rightAnimationDot,
+        };
+    }
+
+    // const observer = new IntersectionObserver((entries) => {
+    //     entries.forEach(entry => {
+    //         if (entry.isIntersecting) { 
+                
+    //         }
+    //     });
+    // }, {
+    //     rootMargin: `-${}px 0px -30% 0px`,
+    //     threshold: 0.5
+    // });
+        
+        // casesList?.forEach(item => observer.observe(item));
+        
+        // return () => observer.disconnect();
 
 
     return (
