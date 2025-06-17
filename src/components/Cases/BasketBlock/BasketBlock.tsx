@@ -53,7 +53,7 @@ const BasketBlock = (): ReactElement => {
                     className={`btn ${styles.btn}`}
                     onClick={blockDisplay}
                 >
-                    More
+                    {showCases ? "Hide" : "More"}
                 </button>
             </div>
             <div 
