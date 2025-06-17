@@ -6,13 +6,17 @@ import Link from 'next/link';
 
 const BasketCase = ({
     basketCase,
+    rightPosition,
+    backWidth,
 }: {
-    basketCase: ICase; 
+    basketCase: ICase;
+    rightPosition: string; 
+    backWidth: number;
 }): ReactElement => {
     return (
         <div 
             className={styles.wrapper} 
-            style={{backgroundImage: `url(${basketCase.url})`}}
+            style={{backgroundImage: `url(${basketCase.url})`, right: rightPosition, width: `${backWidth}px`}}
         >
             <Link 
                 className={styles.link} 
