@@ -39,7 +39,6 @@ const BasketBlock = (): ReactElement => {
 
         const initAnimationData = () => {
             const animationData = getDataForAnimation(slider);
-            console.log(animationData);
             setDataForAnimation(animationData);
         }
 
@@ -101,7 +100,6 @@ const BasketBlock = (): ReactElement => {
                         const workUnit = child.classList.contains("case_wide") ? dataForAnimation.animationUnitWide : dataForAnimation.animationUnitNarrow;
 
                         const workIndex = child.classList.contains("case_wide") ? 0.5 : 2.2;
-                        const maxIndex = child.classList.contains("case_wide") ? 0.5 : 2.2;
 
                         const percentToLeft = workToLeft / workUnit;
 
@@ -114,7 +112,7 @@ const BasketBlock = (): ReactElement => {
                     
                         } else {
                 
-                            setSlidesBackPosition(prev => prev.map((item, index) => index !== i ? item : blockPosition <= dataForAnimation.leftAnimationDot ? -100 * maxIndex : 0))
+                            setSlidesBackPosition(prev => prev.map((item, index) => index !== i ? item : blockPosition <= dataForAnimation.leftAnimationDot ? -100 * workIndex : 0))
                         }
                     }
                 })
