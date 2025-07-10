@@ -174,7 +174,7 @@ export default BasketBlock;
 function handleWheel (e: WheelEvent, block: RefObject<HTMLDivElement | null>) {
     e.preventDefault();
     if (!block.current) return;
-    block.current.scrollLeft += e.deltaY /* * 0.6 */;
+    block.current.scrollLeft += e.deltaY * 0.6;
 }
 
 function getDataForAnimation(block: HTMLDivElement): IDataForAnimation {
