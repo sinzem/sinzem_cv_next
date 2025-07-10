@@ -12,7 +12,7 @@ const CasesBlock = (): ReactElement => {
     useEffect(() => {
         const updateDeviceType = () => {
             const width = window.innerWidth;
-            if (width < 1199.5) {
+            if (width < 1199) {
               setDeviceType("mobile")
             }  else {
               setDeviceType("desktop")

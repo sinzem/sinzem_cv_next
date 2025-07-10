@@ -12,3 +12,10 @@
     width: 100%;
     cursor: pointer;
 }
+
+@media (max-width: 1199px) {
+    .item_internal {
+        border: 1px solid var(--color-text);
+        border-radius: 6px;
+    }
+}
