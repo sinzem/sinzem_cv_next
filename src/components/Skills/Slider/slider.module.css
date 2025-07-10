@@ -25,7 +25,7 @@
     display: none;
 }
 
-@media (max-width: 575.99px) {
+@media (max-width: 575px) {
     .slider {
         max-width: 280px;
         height: 484px;

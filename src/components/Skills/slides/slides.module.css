@@ -447,7 +447,7 @@
     }
 }
 
-@media (max-width: 575.99px) {
+@media (max-width: 575px) {
     .description_hard_middle, .description_hard_junior {
         display: none;
     }
