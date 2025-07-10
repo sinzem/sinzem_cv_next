@@ -15,7 +15,13 @@
 
 @media (max-width: 1199px) {
     .item_internal {
-        border: 1px solid var(--color-text);
+        border: 2px solid var(--color-text);
         border-radius: 6px;
+    }
+}
+
+@media (max-width: 575px) {
+    .item_internal {
+        border: 1px solid var(--color-text);
     }
 }
