@@ -8,7 +8,7 @@
   --warning-color: red;
   --background: url("../../assets/img/main_block/bg-gen-min.jpg");
   --header-back: url("../../assets/img/main_block/bg-top-1627169017_30-kartinkin-com-p-fon-neitralnii-delovoi-krasivo-30.jpg");
-  --quantity: 1;
+  /* --quantity: 1; */
 
   color-scheme: light;
 }
