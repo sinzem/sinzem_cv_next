@@ -109,11 +109,11 @@ const BasketBlock = (): ReactElement => {
         const slider = sliderRef.current;
         if (!slider) return;
         if (!showCases) {
-            // slider.style.scrollBehavior = "";
+            slider.style.scrollBehavior = "";
             setSlidesBackPosition(new Array(basketCases.length).fill(0));
             setShowCases(true);
         } else {
-            // slider.style.scrollBehavior = "smooth";
+            slider.style.scrollBehavior = "smooth";
             slider.scrollLeft = 0; 
             setShowCases(false);
         }
