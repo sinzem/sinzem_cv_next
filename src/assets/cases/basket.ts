@@ -2,19 +2,24 @@ import { ICase } from "@/types/case";
 
 const basketCases: ICase[] = [
     {
-        id: "b0032",
+        id: "b0033",
         url: "/assets/img/cases_block/basket-cases_img/infinity_line.jpg",
         link: "https://sinzem.github.io/cases/basket/infinity_line/index.html",
     },
     {
-        id: "b0031",
+        id: "b0032",
         url: "/assets/img/cases_block/basket-cases_img/test_parallax_slider.jpg",
         link: "https://sinzem.github.io/cases/basket/test_parallax_slider/index.html",
     },
     {
-        id: "b0030",
+        id: "b0031",
         url: "/assets/img/cases_block/basket-cases_img/image_rotation.jpg",
         link: "https://sinzem.github.io/cases/basket/image_rotation/index.html",
+    },
+    {
+        id: "b0030",
+        url: "/assets/img/cases_block/basket-cases_img/lightsport.jpg",
+        link: "https://sinzem.github.io/cases/basket/lightsport/index.html",
     },
     {
         id: "b0029",
