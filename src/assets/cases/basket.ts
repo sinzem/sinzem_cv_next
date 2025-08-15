@@ -2,44 +2,49 @@ import { ICase } from "@/types/case";
 
 const basketCases: ICase[] = [
     {
-        id: "b0034",
+        id: "b0035",
         url: "/assets/img/cases_block/basket-cases_img/infinity_line.jpg",
         link: "https://sinzem.github.io/cases/basket/infinity_line/index.html",
     },
     {
-        id: "b0033",
+        id: "b0034",
         url: "/assets/img/cases_block/basket-cases_img/test_parallax_slider.jpg",
         link: "https://sinzem.github.io/cases/basket/test_parallax_slider/index.html",
     },
     {
-        id: "b0032",
+        id: "b0033",
         url: "/assets/img/cases_block/basket-cases_img/image_rotation.jpg",
         link: "https://sinzem.github.io/cases/basket/image_rotation/index.html",
     },
     {
-        id: "b0031",
+        id: "b0032",
         url: "/assets/img/cases_block/basket-cases_img/lightsport.jpg",
         link: "https://sinzem.github.io/cases/basket/lightsport/index.html",
     },
     {
-        id: "b0030",
+        id: "b0031",
         url: "/assets/img/cases_block/basket-cases_img/deep_modern_shop_3d.jpg",
         link: "https://sinzem.github.io/cases/basket/deep_modern_shop_3d/index.html",
     },
     {
-        id: "b0029",
+        id: "b0030",
         url: "/assets/img/cases_block/basket-cases_img/Attraction_particles.jpg",
         link: "https://sinzem.github.io/cases/basket/Attraction_particles/index.html",
     },
     {
-        id: "b0028",
+        id: "b0029",
         url: "/assets/img/cases_block/basket-cases_img/accordion_animation.jpg",
         link: "https://sinzem.github.io/cases/basket/accordion_animation/index.html",
     },
     {
-        id: "b0027",
+        id: "b0028",
         url: "/assets/img/cases_block/basket-cases_img/css_glitch_cube_cards.jpg",
         link: "https://sinzem.github.io/cases/basket/css_glitch_cube_cards/index.html",
+    },
+    {
+        id: "b0027",
+        url: "/assets/img/cases_block/basket-cases_img/Test_task_Repalm.jpg",
+        link: "https://sinzem.github.io/cases/basket/Test_task_Repalm/index.html",
     },
     {
         id: "b0026",
