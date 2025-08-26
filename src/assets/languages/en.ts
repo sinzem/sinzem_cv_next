@@ -69,7 +69,7 @@ export const en: ILanguageDOM = {
             skillTop1: "Full age: 41",
             skillTop2: "Phone number: ",
             skillTop3: "Place of residence: Kharkiv",
-            skillTop4: "Experiance in development: 2 years",
+            skillTop4: "Experiance in development: 3 years",
             skillTop5: "Participation in commercial projects: 6 months",
             skillBottom1: "Education: KhNPU named after G.S.Skovoroda, psychology, master's degree (did not work in the speciality)",
             skillBottom2: "At the moment I devote all my free time to studying English and IT",
