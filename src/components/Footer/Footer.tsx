@@ -27,7 +27,7 @@ const Footer = ({footer}: {footer: IFooterDOM}): ReactElement => {
                     <Link href="https://t.me/sinzem83" target="_blank" className={styles.link} >
                         <TelegramIcon />
                     </Link>
-                    <Link href="https://www.instagram.com/sinzem83/" target="_blank" className={styles.link} >
+                    <Link href="https://www.linkedin.com/in/sergiy-inosemtsev-29ba42319" target="_blank" className={styles.link} >
                         <Linkedin_from_icons8 />
                     </Link>
                     <Link href="https://www.facebook.com/sinzem/" target="_blank" className={styles.link} >
