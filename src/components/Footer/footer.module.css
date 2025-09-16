@@ -21,7 +21,7 @@
     display: inline-block;
 }
 
-.social a:not(:first-child) {
+.social a:last-child {
     transform: rotate(90deg);
 }   
 

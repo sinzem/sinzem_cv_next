@@ -7,7 +7,8 @@ import FooterForm from "./FooterForm/FooterForm";
 import styles from "./footer.module.css";
 import TelegramIcon from "../../assets/icons/social/tg";
 import FacebookIcon from "../../assets/icons/social/fb";
-import InstagramIcon from "../../assets/icons/social/ig";
+// import InstagramIcon from "../../assets/icons/social/ig";
+import Linkedin_from_icons8 from "@/assets/icons/social/ld";
 
 
 const Footer = ({footer}: {footer: IFooterDOM}): ReactElement => {
@@ -26,12 +27,15 @@ const Footer = ({footer}: {footer: IFooterDOM}): ReactElement => {
                     <Link href="https://t.me/sinzem83" target="_blank" className={styles.link} >
                         <TelegramIcon />
                     </Link>
+                    <Link href="https://www.instagram.com/sinzem83/" target="_blank" className={styles.link} >
+                        <Linkedin_from_icons8 />
+                    </Link>
                     <Link href="https://www.facebook.com/sinzem/" target="_blank" className={styles.link} >
                         <FacebookIcon />
                     </Link>
-                    <Link href="https://www.instagram.com/sinzem83/" target="_blank" className={styles.link} >
+                    {/* <Link href="https://www.instagram.com/sinzem83/" target="_blank" className={styles.link} >
                         <InstagramIcon />
-                    </Link>
+                    </Link> */}
                 </div>
 
                 <div className={`subtitle ${styles.tel}`}>
