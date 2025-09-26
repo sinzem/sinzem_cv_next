@@ -4,22 +4,22 @@ export const mainCases: ICase[] = [
     {
         id: "a0001",
         url: "/assets/img/cases_block/main-cases_img/test_csg.jpg",
-        link: "https://sinzem.github.io/cases/test_to_CSG/index.html",
+        link: "https://sinzem.github.io/cases/test_to_CSG/",
     },
     {
         id: "a0002",
         url: "/assets/img/cases_block/main-cases_img/deep-slider.png",
-        link: "https://sinzem.github.io/cases/deep-slider/index.html",
+        link: "https://sinzem.github.io/cases/deep-slider/",
     },
     {
         id: "a0003",
         url: "/assets/img/cases_block/main-cases_img/windows.png",
-        link: "https://sinzem.github.io/cases/windows-shop/index.html",
+        link: "https://sinzem.github.io/cases/windows-shop/",
     },
     {
         id: "a0004",
         url: "/assets/img/cases_block/main-cases_img/cyclo.png",
-        link: "https://sinzem.github.io/cases/cyclo/index.html",
+        link: "https://sinzem.github.io/cases/cyclo/",
     },
     {
         id: "a0005",
@@ -29,47 +29,52 @@ export const mainCases: ICase[] = [
     {
         id: "a0006",
         url: "/assets/img/cases_block/main-cases_img/shoe_shop.png",
-        link: "https://sinzem.github.io/cases/shoes/index.html",
+        link: "https://sinzem.github.io/cases/shoes/",
     },
     {
         id: "a0007",
         url: "/assets/img/cases_block/main-cases_img/creative_scroll.png",
-        link: "https://sinzem.github.io/cases/creative-scroll/index.html",
+        link: "https://sinzem.github.io/cases/creative-scroll/",
     },
     {
         id: "a0008",
         url: "/assets/img/cases_block/main-cases_img/touristic.png",
-        link: "https://sinzem.github.io/cases/touristic/index.html",
+        link: "https://sinzem.github.io/cases/touristic/",
     },
     {
         id: "a0009",
         url: "/assets/img/cases_block/main-cases_img/paintings_2.png",
-        link: "https://sinzem.github.io/cases/paintings/index.html",
+        link: "https://sinzem.github.io/cases/paintings/",
     },
     {
         id: "a0010",
         url: "/assets/img/cases_block/main-cases_img/pulse.png",
-        link: "https://sinzem.github.io/cases/pulse/index.html",
+        link: "https://sinzem.github.io/cases/pulse/",
     },
     {
         id: "a0011",
         url: "/assets/img/cases_block/main-cases_img/iqtest.png",
-        link: "https://sinzem.github.io/cases/iqgame/index.html",
+        link: "https://sinzem.github.io/cases/iqgame/",
     },
     {
         id: "a0012",
         url: "/assets/img/cases_block/main-cases_img/bring_it_up.png",
-        link: "https://sinzem.github.io/cases/bring_it_up/index.html",
+        link: "https://sinzem.github.io/cases/bring_it_up/",
     },
     {
         id: "a0013",
         url: "/assets/img/cases_block/main-cases_img/food.png",
-        link: "https://sinzem.github.io/cases/food/index.html",
+        link: "https://sinzem.github.io/cases/food/",
     },
-    {
+    // {
+    //     id: "a0014",
+    //     url: "/assets/img/cases_block/main-cases_img/grow_tree.jpg",
+    //     link: "https://sinzem.github.io/cases/grow_tree_parallax_anim_title_HTML_CSS/index.html",
+    // },
+     {
         id: "a0014",
-        url: "/assets/img/cases_block/main-cases_img/grow_tree.jpg",
-        link: "https://sinzem.github.io/cases/grow_tree_parallax_anim_title_HTML_CSS/index.html",
+        url: "/assets/img/cases_block/main-cases_img/Lotoplay_test.jpg",
+        link: "https://sinzem.github.io/cases/Lotoplay_test/",
     },
     {
         id: "a0015",
