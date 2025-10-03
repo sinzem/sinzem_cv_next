@@ -56,10 +56,15 @@ export const mainCases: ICase[] = [
         url: "/assets/img/cases_block/main-cases_img/iqtest.png",
         link: "https://sinzem.github.io/cases/iqgame/",
     },
+    // {
+    //     id: "a0012",
+    //     url: "/assets/img/cases_block/main-cases_img/bring_it_up.png",
+    //     link: "https://sinzem.github.io/cases/bring_it_up/",
+    // },
     {
         id: "a0012",
-        url: "/assets/img/cases_block/main-cases_img/bring_it_up.png",
-        link: "https://sinzem.github.io/cases/bring_it_up/",
+        url: "/assets/img/cases_block/main-cases_img/YD_test_task.jpg",
+        link: "https://sinzem.github.io/cases/basket/YD_test_task/",
     },
     {
         id: "a0013",

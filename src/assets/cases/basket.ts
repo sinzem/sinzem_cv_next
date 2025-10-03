@@ -2,79 +2,84 @@ import { ICase } from "@/types/case";
 
 const basketCases: ICase[] = [
     {
-        id: "b0037",
+        id: "b0038",
         url: "/assets/img/cases_block/basket-cases_img/infinity_line.jpg",
         link: "https://sinzem.github.io/cases/basket/infinity_line/",
     },
     {
-        id: "b0036",
+        id: "b0037",
         url: "/assets/img/cases_block/basket-cases_img/test_parallax_slider.jpg",
         link: "https://sinzem.github.io/cases/basket/test_parallax_slider/",
     },
     {
-        id: "b0035",
+        id: "b0036",
         url: "/assets/img/cases_block/basket-cases_img/image_rotation.jpg",
         link: "https://sinzem.github.io/cases/basket/image_rotation/",
     },
     {
-        id: "b0034",
+        id: "b0035",
         url: "/assets/img/cases_block/basket-cases_img/lightsport.jpg",
         link: "https://sinzem.github.io/cases/basket/lightsport/",
     },
     {
-        id: "b0033",
+        id: "b0034",
         url: "/assets/img/cases_block/basket-cases_img/grow_tree_parallax_anim_title_HTML_CSS.jpg",
         link: "https://sinzem.github.io/cases/grow_tree_parallax_anim_title_HTML_CSS/",
     },
     {
-        id: "b0032",
+        id: "b0033",
         url: "/assets/img/cases_block/basket-cases_img/deep_modern_shop_3d.jpg",
         link: "https://sinzem.github.io/cases/basket/deep_modern_shop_3d/",
     },
     {
-        id: "b0031",
+        id: "b0032",
         url: "/assets/img/cases_block/basket-cases_img/Attraction_particles.jpg",
         link: "https://sinzem.github.io/cases/basket/Attraction_particles/",
     },
     {
-        id: "b0030",
+        id: "b0031",
         url: "/assets/img/cases_block/basket-cases_img/accordion_animation.jpg",
         link: "https://sinzem.github.io/cases/basket/accordion_animation/",
     },
     {
-        id: "b0029",
+        id: "b0030",
         url: "/assets/img/cases_block/basket-cases_img/css_glitch_cube_cards.jpg",
         link: "https://sinzem.github.io/cases/basket/css_glitch_cube_cards/",
     },
     {
-        id: "b0028",
+        id: "b0029",
         url: "/assets/img/cases_block/basket-cases_img/Test_task_Repalm.jpg",
         link: "https://sinzem.github.io/cases/basket/Test_task_Repalm/",
     },
     {
-        id: "b0027",
+        id: "b0028",
         url: "/assets/img/cases_block/basket-cases_img/cards_move_to_cursor.jpg",
         link: "https://sinzem.github.io/cases/basket/cards_move_to_cursor/",
     },
     {
-        id: "b0026",
+        id: "b0027",
         url: "/assets/img/cases_block/basket-cases_img/Smart_Orange_test.jpg",
         link: "https://sinzem.github.io/cases/basket/Smart_Orange_test/",
     },
     {
-        id: "b0025",
+        id: "b0026",
         url: "/assets/img/cases_block/basket-cases_img/dark_interior_slider.jpg",
         link: "https://sinzem.github.io/cases/basket/dark_interior_slider/",
     },
     {
-        id: "b0024",
+        id: "b0025",
         url: "/assets/img/cases_block/basket-cases_img/miami-gallery.jpg",
         link: "https://sinzem.github.io/cases/basket/miami-gallery/",
     },
     {
-        id: "b0023",
+        id: "b0024",
         url: "/assets/img/cases_block/basket-cases_img/dashboard.jpg",
         link: "https://sinzem.github.io/cases/basket/dashboard/",
+    },
+    {
+        id: "b0023",
+        url: "/assets/img/cases_block/basket-cases_img/bring_it_up.jpg",
+        link: "https://sinzem.github.io/cases/bring_it_up/",
     },
     {
         id: "b0022",
