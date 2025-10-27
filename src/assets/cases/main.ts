@@ -41,40 +41,35 @@ export const mainCases: ICase[] = [
         url: "/assets/img/cases_block/main-cases_img/touristic.png",
         link: "https://sinzem.github.io/cases/touristic/",
     },
-    {
+     {
         id: "a0009",
+        url: "/assets/img/cases_block/main-cases_img/GS_test.jpg",
+        link: "https://sinzem.github.io/cases/GS_test/",
+    },
+    {
+        id: "a0010",
         url: "/assets/img/cases_block/main-cases_img/paintings_2.png",
         link: "https://sinzem.github.io/cases/paintings/",
     },
     {
-        id: "a0010",
+        id: "a0011",
         url: "/assets/img/cases_block/main-cases_img/pulse.png",
         link: "https://sinzem.github.io/cases/pulse/",
     },
     {
-        id: "a0011",
+        id: "a0012",
         url: "/assets/img/cases_block/main-cases_img/iqtest.png",
         link: "https://sinzem.github.io/cases/iqgame/",
     },
-    // {
-    //     id: "a0012",
-    //     url: "/assets/img/cases_block/main-cases_img/bring_it_up.png",
-    //     link: "https://sinzem.github.io/cases/bring_it_up/",
-    // },
     {
-        id: "a0012",
+        id: "a0013",
         url: "/assets/img/cases_block/main-cases_img/YD_test_task.jpg",
         link: "https://sinzem.github.io/cases/basket/YD_test_task/",
     },
-    {
-        id: "a0013",
-        url: "/assets/img/cases_block/main-cases_img/food.png",
-        link: "https://sinzem.github.io/cases/food/",
-    },
     // {
-    //     id: "a0014",
-    //     url: "/assets/img/cases_block/main-cases_img/grow_tree.jpg",
-    //     link: "https://sinzem.github.io/cases/grow_tree_parallax_anim_title_HTML_CSS/index.html",
+    //     id: "a0013",
+    //     url: "/assets/img/cases_block/main-cases_img/food.png",
+    //     link: "https://sinzem.github.io/cases/food/",
     // },
      {
         id: "a0014",
