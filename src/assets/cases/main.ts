@@ -53,8 +53,8 @@ export const mainCases: ICase[] = [
     },
     {
         id: "a0011",
-        url: "/assets/img/cases_block/main-cases_img/pulse.png",
-        link: "https://sinzem.github.io/cases/pulse/",
+        url: "/assets/img/cases_block/main-cases_img/otpusk-ua-test_1.jpg",
+        link: "https://otpusk-ua-test.vercel.app/",
     },
     {
         id: "a0012",
