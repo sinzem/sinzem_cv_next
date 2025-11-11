@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import { ReactElement, useMemo } from 'react';
 
 import styles from "./casesBlockDesktop.module.css";
 
@@ -8,10 +8,12 @@ import Case from '../Case/Case';
 
 const CasesBlockDesktop = (): ReactElement => {
 
+    const cases = useMemo(() => mainCases, [mainCases]);
+
     return (
         <div className={styles.items}>
 
-            {mainCases.map((obj) => (
+            {cases.map((obj) => (
 
                 <div className={styles.item} key={obj.id}>
         

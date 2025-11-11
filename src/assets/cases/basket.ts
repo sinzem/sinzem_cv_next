@@ -2,54 +2,59 @@ import { ICase } from "@/types/case";
 
 const basketCases: ICase[] = [
     {
-        id: "b0039",
+        id: "b0040",
         url: "/assets/img/cases_block/basket-cases_img/infinity_line.jpg",
         link: "https://sinzem.github.io/cases/basket/infinity_line/",
     },
     {
-        id: "b0038",
+        id: "b0039",
         url: "/assets/img/cases_block/basket-cases_img/test_parallax_slider.jpg",
         link: "https://sinzem.github.io/cases/basket/test_parallax_slider/",
     },
     {
-        id: "b0037",
+        id: "b0038",
         url: "/assets/img/cases_block/basket-cases_img/image_rotation.jpg",
         link: "https://sinzem.github.io/cases/basket/image_rotation/",
     },
     {
-        id: "b0036",
+        id: "b0037",
         url: "/assets/img/cases_block/basket-cases_img/lightsport.jpg",
         link: "https://sinzem.github.io/cases/basket/lightsport/",
     },
     {
-        id: "b0035",
+        id: "b0036",
         url: "/assets/img/cases_block/basket-cases_img/grow_tree_parallax_anim_title_HTML_CSS.jpg",
         link: "https://sinzem.github.io/cases/grow_tree_parallax_anim_title_HTML_CSS/",
     },
     {
-        id: "b0034",
+        id: "b0035",
         url: "/assets/img/cases_block/basket-cases_img/deep_modern_shop_3d.jpg",
         link: "https://sinzem.github.io/cases/basket/deep_modern_shop_3d/",
     },
     {
-        id: "b0033",
+        id: "b0034",
         url: "/assets/img/cases_block/basket-cases_img/Attraction_particles.jpg",
         link: "https://sinzem.github.io/cases/basket/Attraction_particles/",
     },
     {
-        id: "b0032",
+        id: "b0033",
         url: "/assets/img/cases_block/basket-cases_img/accordion_animation.jpg",
         link: "https://sinzem.github.io/cases/basket/accordion_animation/",
     },
     {
-        id: "b0031",
+        id: "b0032",
         url: "/assets/img/cases_block/basket-cases_img/css_glitch_cube_cards.jpg",
         link: "https://sinzem.github.io/cases/basket/css_glitch_cube_cards/",
     },
     {
-        id: "b0030",
+        id: "b0031",
         url: "/assets/img/cases_block/basket-cases_img/Test_task_Repalm.jpg",
         link: "https://sinzem.github.io/cases/basket/Test_task_Repalm/",
+    },
+    {
+        id: "b0030",
+        url: "/assets/img/cases_block/basket-cases_img/LB_test_task.jpg",
+        link: "https://sinzem.github.io/cases/basket/LB_test_task/",
     },
     {
         id: "b0029",

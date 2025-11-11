@@ -13,7 +13,7 @@ const Hard = ({
     hard: IHardDOM,
     activity: ISlides,
 }): ReactElement => {
-
+    
     return (
         <div className={`
             ${styles.slide} 

@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import { memo } from 'react';
 import Link from 'next/link';
 
 import { ICase } from '@/types/case';
@@ -6,7 +6,7 @@ import { ICase } from '@/types/case';
 import styles from "./case.module.css";
 
 
-const Case = ({project}: {project: ICase}): ReactElement => {
+const Case = memo(function Case({project}: {project: ICase}) {
 
     return (
         
@@ -17,7 +17,7 @@ const Case = ({project}: {project: ICase}): ReactElement => {
         </>
         
     );
-};
+});
 
 export default Case;
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactElement, useEffect, useState } from 'react';
+import { ReactElement, useEffect, useMemo, useState } from 'react';
 
 import styles from "./casesBlockMobile.module.css";
 import { mainCases } from "@/assets/cases/main";
@@ -10,6 +10,8 @@ const CasesBlockMobile = (): ReactElement => {
 
     const [casesList, setCasesList] = useState<NodeListOf<Element> | null>(null);
     const [activeCase, setActiveCase] = useState<string | null>(null);
+
+    const cases = useMemo(() => mainCases, [mainCases]);
 
     useEffect(() => {
         setCasesList(document.querySelectorAll(".item"));
@@ -40,7 +42,7 @@ const CasesBlockMobile = (): ReactElement => {
 
             <div className={"item"}></div> {/* (даст activeCase = null) */}
 
-            {mainCases.map((obj) => (
+            {cases.map((obj) => (
                 <div 
                     id={obj.id} 
                     key={obj.id}
